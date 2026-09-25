@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AT Creations | Bespoke Bridal Embroidery & Haute Needlework Atelier</title>
+  
+  <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              950: '#1F060A',
+              900: '#2F080F',
+              850: '#3D0B13',
+              800: '#4A0E17', // Primary Brand Royal Wine
+              700: '#641521',
+              600: '#7E1C2B',
+              50: '#FDF7F8'
+            },
+            gold: {
+              light: '#F5ECDA',
+              champagne: '#E6D5AC',
+              DEFAULT: '#C5A059', // Antique Muted Gold
+              dark: '#9A7733',
+              deep: '#6F5420'
+            },
+            silk: {
+              ivory: '#FAF7F2', // Pearl Silk background
+              linen: '#F3ECE2', // Soft Linen accent
+              border: '#E8DC CE'
+            },
+            espresso: '#1F191A'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Montserrat"', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'luxury': '0 20px 45px -15px rgba(74, 14, 23, 0.14)',
+            'gold-glow': '0 10px 30px -5px rgba(197, 160, 89, 0.35)',
+            'royal-inner': 'inset 0 1px 0 rgba(230, 213, 172, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C5A059;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9A7733;
+    }
+
+    /* Metallic Gradient Typography */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F3E5C8 0%, #C5A059 50%, #8E6D2B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Traditional Motif Divider */
+    .ornament-line {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .ornament-line::before,
+    .ornament-line::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+    }
+    .ornament-line:not(:empty)::before {
+      margin-right: 1.25em;
+    }
+    .ornament-line:not(:empty)::after {
+      margin-left: 1.25em;
+    }
+  </style>
+</head>
+
+<body class="bg-silk-ivory text-espresso font-sans antialiased selection:bg-gold/30 selection:text-maroon-900 overflow-x-hidden">
+
+  <!-- Announcement Ribbon -->
+  <div class="bg-maroon-950 text-silk-linen py-2 px-4 text-[11px] sm:text-xs font-medium tracking-widest uppercase border-b border-gold/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-1.5">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <span>Atelier Doors Open &bull; Now Accepting Bespoke Bridal Commissions</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px] tracking-wider text-gold-champagne/90">
+        <a href="tel:+919110231866" class="hover:text-white transition-colors">
+          <i class="fa-solid fa-phone text-gold mr-1.5"></i> +91 9110231866
+        </a>
+        <span class="hidden md:inline text-gold/40">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-gold mr-1.5"></i> Mannivakkam, Chennai</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Luxury Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-silk-ivory/95 backdrop-blur-md border-b border-gold/25 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 sm:h-24">
+        
+        <!-- Left Nav (Desktop) -->
+        <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium text-maroon-900">
+          <a href="#atelier" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">The Atelier</a>
+          <a href="#craft" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Craftsmanship</a>
+          <a href="#journey" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">How It Works</a>
+          <a href="#customizer" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold text-maroon-800 font-bold">Bespoke Inquiry</a>
+          <a href="#founder" class="hover:text-gold transition-colors py-2 border-b-2 border-transparent hover:border-gold">Founder's Note</a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-maroon-900 hover:text-gold focus:outline-none" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Center Brand Logo & Monogram -->
+        <div class="flex-shrink-0 text-center flex flex-col items-center justify-center cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <div class="flex items-center gap-1.5">
+            <span class="w-6 h-[1px] bg-gold hidden sm:inline-block"></span>
+            <div class="w-8 h-8 rounded-full border border-gold/70 flex items-center justify-center bg-maroon-800 text-gold shadow-sm">
+              <span class="font-serif italic font-bold text-base tracking-tighter">AT</span>
+            </div>
+            <span class="w-6 h-[1px] bg-gold hidden sm:inline-block"></span>
+          </div>
+          <span class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold tracking-[0.22em] text-maroon-900 uppercase mt-0.5">
+            AT Creations
+          </span>
+          <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-gold-dark font-medium -mt-1">
+            Bespoke Embroidery Atelier
+          </span>
+        </div>
+
+        <!-- Right CTA Button -->
+        <div class="flex items-center space-x-3 sm:space-x-4">
+          <a href="#contact" class="hidden sm:inline-block text-xs uppercase tracking-wider font-semibold text-maroon-900 hover:text-gold transition-colors">
+            Mannivakkam Studio
+          </a>
+
+          <button onclick="openConsultationModal()" class="relative group overflow-hidden px-4 sm:px-6 py-2.5 rounded-full bg-maroon-800 text-gold-champagne text-xs font-semibold uppercase tracking-wider shadow-md hover:shadow-gold-glow transition-all duration-300 border border-gold/40">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-regular fa-calendar-check text-gold"></i>
+              <span>Book Consultation</span>
+            </span>
+            <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-gold/30 to-transparent transition-transform ease-out"></div>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-silk-linen border-t border-gold/30 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4 text-sm uppercase tracking-widest font-medium text-maroon-900">
+        <a href="#atelier" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1">The Atelier</a>
+        <a href="#craft" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1">Craftsmanship Disciplines</a>
+        <a href="#journey" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1">The Bespoke Journey</a>
+        <a href="#customizer" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1 font-bold text-maroon-800">Bespoke Design Inquiry</a>
+        <a href="#founder" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1">Founder's Note</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-gold transition-colors py-1">Studio & Contact</a>
+      </div>
+      <div class="mt-6 pt-6 border-t border-gold/20 flex flex-col gap-2">
+        <span class="text-xs uppercase text-espresso/70 tracking-wider">Direct Atelier Concierge:</span>
+        <a href="tel:+919110231866" class="text-xs font-bold text-maroon-900 flex items-center gap-2">
+          <i class="fa-solid fa-phone text-gold"></i> +91 9110231866
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Editorial Atelier Reveal -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-silk-ivory via-silk-linen to-silk-ivory py-16 sm:py-24">
+    <!-- Subtle Pattern Texture -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#4A0E17_1.2px,transparent_1.2px)] [background-size:28px_28px]"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center space-y-8">
+      
+      <!-- Heritage Tagline Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-maroon-50 border border-gold/40 text-maroon-900 text-xs font-semibold uppercase tracking-[0.25em] shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+        <span>Threaded with creativity, worn with pride</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-maroon-900 leading-[1.12] tracking-tight">
+        Traditional Designs, <br>
+        <span class="italic font-normal gold-gradient-text">Modern Touch.</span>
+      </h1>
+
+      <p class="font-serif italic text-xl sm:text-2xl text-gold-dark max-w-xl mx-auto">
+        "Wear Your Story"
+      </p>
+
+      <!-- Editorial Intro Copy -->
+      <p class="font-sans text-espresso/80 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        Welcome to the atelier of <strong class="font-semibold text-maroon-900">AT Creations</strong>. We specialize in bespoke bridal embroidery—honoring the sacred heritage of Tamil Nadu’s needlecraft with pristine hook-work Aari, zardozi embellishments, and contemporary multi-thread machine precision.
+      </p>
+
+      <!-- Dual Action CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="#customizer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-maroon-800 hover:bg-maroon-900 text-gold-champagne font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-luxury hover:shadow-gold-glow flex items-center justify-center gap-3 border border-gold/30 group">
+          <span>Start Your Bespoke Order</span>
+          <i class="fa-solid fa-arrow-down-long text-gold group-hover:translate-y-0.5 transition-transform"></i>
+        </a>
+        
+        <a href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20embroidery%20for%20an%20upcoming%20occasion." target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white hover:bg-silk-linen text-maroon-900 font-semibold text-xs uppercase tracking-widest transition-colors duration-300 border border-gold/50 flex items-center justify-center gap-2 shadow-sm">
+          <i class="fa-brands fa-whatsapp text-emerald-700 text-base"></i>
+          <span>Connect on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Trust Pillars -->
+      <div class="pt-10 border-t border-gold/30 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <span class="block font-serif text-lg font-bold text-maroon-900">100% Bespoke</span>
+          <span class="text-[11px] uppercase tracking-wider text-espresso/70">Custom to Your Measurements</span>
+        </div>
+        <div>
+          <span class="block font-serif text-lg font-bold text-maroon-900">Heirloom Materials</span>
+          <span class="text-[11px] uppercase tracking-wider text-espresso/70">Authentic Zari & Cutbead</span>
+        </div>
+        <div>
+          <span class="block font-serif text-lg font-bold text-maroon-900">Direct Consultation</span>
+          <span class="text-[11px] uppercase tracking-wider text-espresso/70">With Kavya Shyamsundar</span>
+        </div>
+        <div>
+          <span class="block font-serif text-lg font-bold text-maroon-900">Worldwide Delivery</span>
+          <span class="text-[11px] uppercase tracking-wider text-espresso/70">India, USA, UK, UAE & Beyond</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Heritage Highlights Strip -->
+  <section class="bg-maroon-900 text-silk-linen py-8 border-y border-gold/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex items-center space-x-3.5 p-2">
+          <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold text-base flex-shrink-0">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-gold-champagne">Worldwide Shipping</h4>
+            <p class="text-[11px] text-silk-linen/75">Insured door-to-door delivery</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3.5 p-2">
+          <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold text-base flex-shrink-0">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-gold-champagne">Purity of Materials</h4>
+            <p class="text-[11px] text-silk-linen/75">Non-tarnishing zari, crystals & pearls</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3.5 p-2">
+          <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold text-base flex-shrink-0">
+            <i class="fa-solid fa-ruler-combined"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-gold-champagne">Custom Tailoring</h4>
+            <p class="text-[11px] text-silk-linen/75">Made to your precise silhouette</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3.5 p-2">
+          <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold text-base flex-shrink-0">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <div>
+            <h4 class="font-serif text-base font-bold text-gold-champagne">Personalized Sketching</h4>
+            <p class="text-[11px] text-silk-linen/75">Direct artisan consultation</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Craftsmanship Disciplines -->
+  <section id="craft" class="py-20 bg-silk-ivory relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold">Artisanal Mastery</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-maroon-900">Craftsmanship Disciplines</h2>
+        <div class="ornament-line text-gold text-xs mx-auto w-40">&#10022;</div>
+        <p class="text-espresso/75 text-xs sm:text-sm font-light">
+          Every custom garment is envisioned as an heirloom. We combine traditional Maggam frame handwork with sharp multi-thread machine design.
+        </p>
+      </div>
+
+      <!-- 3-Column Craft Cards (No Pricing) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Discipline 1: Handcrafted Aari Work -->
+        <div class="bg-white rounded-2xl p-8 border border-gold/40 shadow-luxury flex flex-col justify-between hover:border-maroon-800 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-maroon-50 border border-gold/40 text-maroon-800 flex items-center justify-center text-2xl group-hover:bg-maroon-800 group-hover:text-gold transition-colors">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <span class="text-[11px] uppercase tracking-wider font-semibold text-gold-dark block">Generational Heritage</span>
+            <h3 class="font-serif text-2xl font-bold text-maroon-900">Handcrafted Aari & Zardozi</h3>
+            <p class="text-xs sm:text-sm text-espresso/75 leading-relaxed font-light">
+              Crafted meticulously on traditional wooden Maggam stretch frames using pointed hook needles. Richly enriched with genuine French wire zardozi, Austrian cutdana beads, seed pearls (moti), and Kundan stone framing.
+            </p>
+            <div class="pt-2">
+              <ul class="text-xs text-espresso/70 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Antique Zari and Metallic Wire</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Traditional Temple & Floral Motifs</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Layered 3D Relief Stitching</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-silk-border mt-6">
+            <button onclick="prefillGarment('Handcrafted Aari Work')" class="w-full py-2.5 rounded-lg border border-maroon-800 text-maroon-800 hover:bg-maroon-800 hover:text-white transition-colors text-xs font-semibold uppercase tracking-wider">
+              Inquire Aari Handwork
+            </button>
+          </div>
+        </div>
+
+        <!-- Discipline 2: Precision Machine Embroidery -->
+        <div class="bg-white rounded-2xl p-8 border border-gold/40 shadow-luxury flex flex-col justify-between hover:border-maroon-800 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-maroon-50 border border-gold/40 text-maroon-800 flex items-center justify-center text-2xl group-hover:bg-maroon-800 group-hover:text-gold transition-colors">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <span class="text-[11px] uppercase tracking-wider font-semibold text-gold-dark block">Contemporary Symmetry</span>
+            <h3 class="font-serif text-2xl font-bold text-maroon-900">Machine Embroidery</h3>
+            <p class="text-xs sm:text-sm text-espresso/75 leading-relaxed font-light">
+              High-density multi-thread computerized needlework designed for crisp architectural geometric lines, lightweight occasion wear, and repetitive border elegance with uniform satin stitch luster.
+            </p>
+            <div class="pt-2">
+              <ul class="text-xs text-espresso/70 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Architectural Jaal & Geometric Grids</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Multi-Color Resham Silk Threads</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Lightweight & Durable Occasion Wear</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-silk-border mt-6">
+            <button onclick="prefillGarment('Machine Embroidery')" class="w-full py-2.5 rounded-lg border border-maroon-800 text-maroon-800 hover:bg-maroon-800 hover:text-white transition-colors text-xs font-semibold uppercase tracking-wider">
+              Inquire Machine Work
+            </button>
+          </div>
+        </div>
+
+        <!-- Discipline 3: Bespoke Bridal Customization -->
+        <div class="bg-white rounded-2xl p-8 border border-gold/40 shadow-luxury flex flex-col justify-between hover:border-maroon-800 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-maroon-50 border border-gold/40 text-maroon-800 flex items-center justify-center text-2xl group-hover:bg-maroon-800 group-hover:text-gold transition-colors">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <span class="text-[11px] uppercase tracking-wider font-semibold text-gold-dark block">Customized Storytelling</span>
+            <h3 class="font-serif text-2xl font-bold text-maroon-900">Bespoke Customization</h3>
+            <p class="text-xs sm:text-sm text-espresso/75 leading-relaxed font-light">
+              Tailor-made commissions starting completely from your inspiration photos, wedding theme, and fabric swatches. We incorporate personalized wedding dates, couple monograms, and custom neckline cuts.
+            </p>
+            <div class="pt-2">
+              <ul class="text-xs text-espresso/70 space-y-1.5 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Personalized Monogram & Date Patches</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Pure Kanchipuram Brocade Matching</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Coordinated Trousseau & Keepsakes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-silk-border mt-6">
+            <button onclick="prefillGarment('Bespoke Fusion')" class="w-full py-2.5 rounded-lg border border-maroon-800 text-maroon-800 hover:bg-maroon-800 hover:text-white transition-colors text-xs font-semibold uppercase tracking-wider">
+              Start Custom Brief
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works: The Bespoke Journey -->
+  <section id="journey" class="py-20 bg-silk-linen border-y border-gold/30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-[0.25em] text-maroon-900 font-bold">The Commission Process</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-maroon-900">How We Craft Your Heirloom</h2>
+        <p class="text-espresso/75 text-xs sm:text-sm font-light">
+          Four deliberate steps to transform your fabric and design vision into an exquisite work of embroidery.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-gold/30 shadow-sm relative">
+          <div class="w-10 h-10 rounded-full bg-maroon-800 text-gold-champagne font-serif font-bold text-base flex items-center justify-center mb-4">
+            01
+          </div>
+          <h4 class="font-serif text-xl font-bold text-maroon-900">Design Consultation</h4>
+          <p class="text-xs text-espresso/75 mt-2 leading-relaxed font-light">
+            Share your saree color, event date, and design ideas via WhatsApp or visit our Mannivakkam studio.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-gold/30 shadow-sm relative">
+          <div class="w-10 h-10 rounded-full bg-maroon-800 text-gold-champagne font-serif font-bold text-base flex items-center justify-center mb-4">
+            02
+          </div>
+          <h4 class="font-serif text-xl font-bold text-maroon-900">Motif & Tracing</h4>
+          <p class="text-xs text-espresso/75 mt-2 leading-relaxed font-light">
+            We draft precise necklines, sleeve dimensions, and paper tracings tailored to your exact measurements.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-gold/30 shadow-sm relative">
+          <div class="w-10 h-10 rounded-full bg-maroon-800 text-gold-champagne font-serif font-bold text-base flex items-center justify-center mb-4">
+            03
+          </div>
+          <h4 class="font-serif text-xl font-bold text-maroon-900">Master Needlework</h4>
+          <p class="text-xs text-espresso/75 mt-2 leading-relaxed font-light">
+            Artisans stitch thread by thread using pure zari, cutbeads, and zardozi on dedicated timber frames.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-gold/30 shadow-sm relative">
+          <div class="w-10 h-10 rounded-full bg-maroon-800 text-gold-champagne font-serif font-bold text-base flex items-center justify-center mb-4">
+            04
+          </div>
+          <h4 class="font-serif text-xl font-bold text-maroon-900">Fitting & Delivery</h4>
+          <p class="text-xs text-espresso/75 mt-2 leading-relaxed font-light">
+            Final inspection, custom tailoring if requested, and secure insured delivery right to your doorstep.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Bespoke Design Inquiry (No Pricing) -->
+  <section id="customizer" class="py-20 bg-silk-ivory relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Studio Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-dark font-bold">Direct Commission Desk</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-maroon-900 mt-1">Bespoke Design Inquiry</h2>
+        <p class="text-xs sm:text-sm text-espresso/75 mt-2 font-light">
+          Tell us about your garment vision. This form compiles your brief and transmits it directly to Lead Designer Kavya Shyamsundar on WhatsApp for prompt review.
+        </p>
+      </div>
+
+      <!-- Inquiry Box -->
+      <div class="bg-white rounded-3xl shadow-luxury border border-gold/40 overflow-hidden">
+        
+        <!-- Step Indicators -->
+        <div class="grid grid-cols-3 bg-silk-linen border-b border-gold/30">
+          <button id="step-tab-1" onclick="goToStep(1)" class="py-4 px-2 sm:px-4 text-center font-medium transition-all border-b-2 border-maroon-800 text-maroon-900 font-serif text-xs sm:text-base flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-maroon-800 text-white text-[11px] font-sans flex items-center justify-center">1</span>
+            <span>Garment Canvas</span>
+          </button>
+          <button id="step-tab-2" onclick="goToStep(2)" class="py-4 px-2 sm:px-4 text-center font-medium transition-all border-b-2 border-transparent text-espresso/60 font-serif text-xs sm:text-base flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-gold/40 text-maroon-900 text-[11px] font-sans flex items-center justify-center">2</span>
+            <span>Embroidery Style</span>
+          </button>
+          <button id="step-tab-3" onclick="goToStep(3)" class="py-4 px-2 sm:px-4 text-center font-medium transition-all border-b-2 border-transparent text-espresso/60 font-serif text-xs sm:text-base flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-gold/40 text-maroon-900 text-[11px] font-sans flex items-center justify-center">3</span>
+            <span>Details & Date</span>
+          </button>
+        </div>
+
+        <div class="p-6 sm:p-10">
+          
+          <!-- STEP 1: Garment Type -->
+          <div id="step-content-1" class="space-y-6">
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-maroon-900">Step 1: Select Garment Type</h3>
+            <p class="text-xs sm:text-sm text-espresso/70 -mt-4">Choose the silhouette you wish to have embellished.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              
+              <!-- Option 1 -->
+              <div onclick="selectGarment('Bridal Blouse')" class="garment-option cursor-pointer p-5 rounded-xl border-2 border-maroon-800 bg-maroon-50/70 transition-all hover:border-maroon-800 text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-maroon-800/10 text-maroon-800 flex items-center justify-center text-xl mb-3">
+                  <i class="fa-solid fa-vest-patches"></i>
+                </div>
+                <h4 class="font-serif font-bold text-maroon-900 text-base">Bridal Blouse</h4>
+                <p class="text-[11px] text-espresso/70 mt-1">Back-neck, front neck & elbow sleeve borders</p>
+              </div>
+
+              <!-- Option 2 -->
+              <div onclick="selectGarment('Saree Embellishment')" class="garment-option cursor-pointer p-5 rounded-xl border-2 border-silk-border bg-white transition-all hover:border-gold text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/15 text-gold-dark flex items-center justify-center text-xl mb-3">
+                  <i class="fa-solid fa-scroll"></i>
+                </div>
+                <h4 class="font-serif font-bold text-maroon-900 text-base">Saree Border / Pallu</h4>
+                <p class="text-[11px] text-espresso/70 mt-1">Cutwork borders, scalloped hem & grand pallu motifs</p>
+              </div>
+
+              <!-- Option 3 -->
+              <div onclick="selectGarment('Occasion Wear')" class="garment-option cursor-pointer p-5 rounded-xl border-2 border-silk-border bg-white transition-all hover:border-gold text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/15 text-gold-dark flex items-center justify-center text-xl mb-3">
+                  <i class="fa-solid fa-person-dress"></i>
+                </div>
+                <h4 class="font-serif font-bold text-maroon-900 text-base">Occasion Kurti / Lehanga</h4>
+                <p class="text-[11px] text-espresso/70 mt-1">Yoke necklines, waistband detailing & motif patches</p>
+              </div>
+
+              <!-- Option 4 -->
+              <div onclick="selectGarment('Personalized Keepsake')" class="garment-option cursor-pointer p-5 rounded-xl border-2 border-silk-border bg-white transition-all hover:border-gold text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-gold/15 text-gold-dark flex items-center justify-center text-xl mb-3">
+                  <i class="fa-solid fa-gift"></i>
+                </div>
+                <h4 class="font-serif font-bold text-maroon-900 text-base">Keepsake / Monogram</h4>
+                <p class="text-[11px] text-espresso/70 mt-1">Personalized wedding initials frame or couple patch</p>
+              </div>
+
+            </div>
+
+            <div class="flex justify-end pt-4">
+              <button onclick="goToStep(2)" class="px-6 py-2.5 rounded-full bg-maroon-800 text-gold-champagne text-xs uppercase tracking-wider font-semibold hover:bg-maroon-900 transition-colors flex items-center gap-2">
+                <span>Continue to Embroidery Style</span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Embroidery Technique -->
+          <div id="step-content-2" class="hidden space-y-6">
+            <div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-maroon-900">Step 2: Choose Embroidery Craft</h3>
+              <p class="text-xs sm:text-sm text-espresso/70">Select your preferred needlework medium and motif family.</p>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-2">Embroidery Technique</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                
+                <button type="button" onclick="selectTechnique('Handcrafted Aari Work')" class="technique-option p-4 rounded-xl border-2 border-maroon-800 bg-maroon-50 text-left transition-all">
+                  <div class="font-serif font-bold text-maroon-900 text-base">Handcrafted Aari Work</div>
+                  <div class="text-[11px] text-espresso/70 mt-1">Traditional Maggam hook work, zardozi spirals, cutdana beads & moti</div>
+                </button>
+
+                <button type="button" onclick="selectTechnique('Machine Embroidery')" class="technique-option p-4 rounded-xl border-2 border-silk-border bg-white text-left transition-all hover:border-gold">
+                  <div class="font-serif font-bold text-maroon-900 text-base">Machine Embroidery</div>
+                  <div class="text-[11px] text-espresso/70 mt-1">Precision computerized multi-thread work with architectural symmetry</div>
+                </button>
+
+                <button type="button" onclick="selectTechnique('Bespoke Fusion')" class="technique-option p-4 rounded-xl border-2 border-silk-border bg-white text-left transition-all hover:border-gold">
+                  <div class="font-serif font-bold text-maroon-900 text-base">Bespoke Fusion</div>
+                  <div class="text-[11px] text-espresso/70 mt-1">Machine base with rich artisan hand-stonework and zardozi highlights</div>
+                </button>
+
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-2">Preferred Motif Direction</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <button type="button" onclick="selectMotif('Traditional Peacock & Birds')" class="motif-option p-3 rounded-lg border-2 border-maroon-800 bg-maroon-50 text-center transition-all">
+                  <i class="fa-solid fa-dove text-gold text-lg mb-1 block"></i>
+                  <span class="text-xs font-semibold text-maroon-900 block">Peacock & Birds</span>
+                </button>
+                <button type="button" onclick="selectMotif('Temple & Sacred Gopuram')" class="motif-option p-3 rounded-lg border-2 border-silk-border bg-white text-center transition-all hover:border-gold">
+                  <i class="fa-solid fa-gopuram text-gold text-lg mb-1 block"></i>
+                  <span class="text-xs font-semibold text-maroon-900 block">Temple & Gopuram</span>
+                </button>
+                <button type="button" onclick="selectMotif('Lotus & Floral Vines')" class="motif-option p-3 rounded-lg border-2 border-silk-border bg-white text-center transition-all hover:border-gold">
+                  <i class="fa-solid fa-spa text-gold text-lg mb-1 block"></i>
+                  <span class="text-xs font-semibold text-maroon-900 block">Lotus & Floral Vines</span>
+                </button>
+                <button type="button" onclick="selectMotif('Contemporary Minimal Geometric')" class="motif-option p-3 rounded-lg border-2 border-silk-border bg-white text-center transition-all hover:border-gold">
+                  <i class="fa-solid fa-shapes text-gold text-lg mb-1 block"></i>
+                  <span class="text-xs font-semibold text-maroon-900 block">Minimal Geometric</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-between pt-4">
+              <button onclick="goToStep(1)" class="px-5 py-2 rounded-full border border-espresso/30 text-espresso/80 text-xs font-semibold uppercase tracking-wider hover:bg-silk-linen transition-colors">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+              </button>
+              <button onclick="goToStep(3)" class="px-6 py-2.5 rounded-full bg-maroon-800 text-gold-champagne text-xs uppercase tracking-wider font-semibold hover:bg-maroon-900 transition-colors flex items-center gap-2">
+                <span>Continue to Contact & Schedule</span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Details & Contact (WhatsApp Dispatch) -->
+          <div id="step-content-3" class="hidden space-y-6">
+            <div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-maroon-900">Step 3: Client Details & Occasion Schedule</h3>
+              <p class="text-xs sm:text-sm text-espresso/70">Finalize your inquiry to generate a direct atelier briefing.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Your Full Name *</label>
+                <input type="text" id="inquiry-name" required placeholder="e.g. Radhika Sundaram" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Phone / WhatsApp Number *</label>
+                <input type="tel" id="inquiry-phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Delivery City & Country</label>
+                <input type="text" id="inquiry-city" placeholder="e.g. Chennai / Bangalore / London / Dallas" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Target Occasion / Wedding Date</label>
+                <input type="date" id="inquiry-date" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Fabric Preference</label>
+                <select id="inquiry-fabric" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+                  <option value="I will provide/courier my own blouse fabric bit">I will courier / bring my own saree blouse bit</option>
+                  <option value="AT Creations Pure Raw Silk (Deep Wine / Maroon)">AT Creations Pure Raw Silk (Deep Wine / Maroon)</option>
+                  <option value="AT Creations Pure Raw Silk (Antique Mustard Gold)">AT Creations Pure Raw Silk (Antique Mustard Gold)</option>
+                  <option value="AT Creations Pure Raw Silk (Emerald Green)">AT Creations Pure Raw Silk (Emerald Green)</option>
+                  <option value="Pure Kanjivaram Brocade Match Needed">Need atelier to source Kanjivaram brocade</option>
+                  <option value="Silk Velvet or Organza">Silk Velvet or Organza</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Preferred Consultation Type</label>
+                <select id="inquiry-consult-mode" class="w-full bg-silk-ivory border border-gold/50 rounded-lg px-3.5 py-2.5 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800">
+                  <option value="WhatsApp Video Call / Chat">WhatsApp Video Call / Chat</option>
+                  <option value="Physical Visit to Mannivakkam Studio">Physical Studio Visit (Mannivakkam)</option>
+                  <option value="Direct Phone Call">Direct Phone Call</option>
+                </select>
+              </div>
+
+              <div class="md:col-span-2">
+                <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Specific Design Requests / Reference Notes</label>
+                <textarea id="inquiry-notes" rows="2" placeholder="Tell us about your neckline preference (e.g. pot neck, square neck, deep U), sleeve length, or reference ideas you'd like to share..." class="w-full bg-silk-ivory border border-gold/50 rounded-lg p-3 text-xs text-maroon-900 font-medium focus:outline-none focus:border-maroon-800"></textarea>
+              </div>
+
+            </div>
+
+            <!-- Briefing Summary Banner -->
+            <div class="bg-maroon-50 border border-gold/40 rounded-2xl p-5 mt-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span class="text-[11px] font-semibold uppercase tracking-widest text-gold-dark">Commission Summary:</span>
+                  <h4 id="inquiry-summary-text" class="font-serif text-xl font-bold text-maroon-900 mt-0.5">
+                    Bridal Blouse &bull; Handcrafted Aari Work &bull; Traditional Peacock & Birds
+                  </h4>
+                  <p class="text-xs text-espresso/70 mt-1">
+                    Your brief will be formatted and transmitted to Kavya Shyamsundar at the atelier.
+                  </p>
+                </div>
+
+                <button onclick="dispatchBespokeWhatsApp()" class="px-7 py-3.5 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs uppercase tracking-wider shadow-lg flex items-center justify-center gap-2.5 transition-all transform hover:scale-[1.02]">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Submit Inquiry via WhatsApp</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="flex justify-between pt-2">
+              <button onclick="goToStep(2)" class="px-5 py-2 rounded-full border border-espresso/30 text-espresso/80 text-xs font-semibold uppercase tracking-wider hover:bg-silk-linen transition-colors">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+              </button>
+              <span class="text-[11px] text-espresso/60 flex items-center">
+                <i class="fa-solid fa-shield-halved text-gold mr-1.5"></i> Direct Atelier Line: +91 9110231866
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Founder Note & Story (Typographic & Crest - No Photo) -->
+  <section id="founder" class="py-20 bg-maroon-900 text-silk-linen relative overflow-hidden">
+    <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none"></div>
+    <div class="absolute -left-24 -bottom-24 w-96 h-96 rounded-full bg-maroon-700/20 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+      
+      <!-- Atelier Royal Crest Seal -->
+      <div class="inline-flex flex-col items-center justify-center">
+        <div class="w-20 h-20 rounded-full border-2 border-gold/70 p-1 flex items-center justify-center bg-maroon-850 shadow-gold-glow">
+          <div class="w-full h-full rounded-full border border-gold/40 flex flex-col items-center justify-center text-gold">
+            <span class="font-serif italic font-bold text-2xl tracking-tighter">AT</span>
+          </div>
+        </div>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-gold-champagne font-semibold mt-2">Atelier Kavya Shyamsundar</span>
+      </div>
+
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl mx-auto leading-tight">
+        "Every stitch is an intimate prayer of devotion to Indian needlecraft."
+      </h2>
+
+      <div class="max-w-2xl mx-auto space-y-4 text-xs sm:text-sm text-silk-linen/85 leading-relaxed font-light text-left sm:text-center">
+        <p>
+          I founded <strong class="text-gold-champagne font-medium">AT Creations</strong> with an unwavering reverence for the time-honored Maggam frames of Tamil Nadu and the storied needlework traditions of Indian wedding trousseaus. In an era of mass-produced uniformity, we believe that bridal wear should be as unique and personal as the vows you speak.
+        </p>
+        <p>
+          Our boutique studio at Ruby Royal Tower, Mannivakkam was created to offer brides a genuine creative sanctuary. Whether you bring an ancestral Kanjivaram saree passed down through generations or wish to design a fresh occasion silhouette, each needle pull, micro-pearl, and zardozi spiral is placed with heartfelt intention.
+        </p>
+      </div>
+
+      <!-- Signature Callout -->
+      <div class="pt-6 border-t border-gold/30 flex flex-col items-center justify-center">
+        <span class="font-serif italic text-2xl sm:text-3xl text-gold-champagne tracking-wide">Kavya Shyamsundar</span>
+        <span class="text-[11px] uppercase tracking-widest text-gold/80 mt-1">Founder & Creative Director &bull; AT Creations</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Studio Contact & Footer -->
+  <footer id="contact" class="bg-maroon-950 border-t border-gold/40 text-silk-linen pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-gold/20">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full border border-gold flex items-center justify-center bg-maroon-900 text-gold font-serif font-bold text-sm">
+              AT
+            </div>
+            <span class="font-serif text-2xl font-bold tracking-widest text-gold-champagne uppercase">AT Creations</span>
+          </div>
+          <p class="text-xs text-silk-linen/80 leading-relaxed font-light">
+            An exclusive boutique embroidery studio crafting handcrafted Aari zardozi, multi-thread machine designs, and bespoke wedding heirlooms.
+          </p>
+          <p class="italic font-serif text-sm text-gold-champagne">
+            "Threaded with creativity, worn with pride"
+          </p>
+        </div>
+
+        <!-- Studio Address & Visiting Info -->
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-serif text-lg font-bold text-gold-champagne tracking-wider uppercase">Studio & Atelier</h4>
+          <ul class="space-y-2.5 text-xs text-silk-linen/85">
+            <li class="flex items-start space-x-2.5">
+              <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+              <span>Ruby Royal Tower,<br>Mannivakkam, Chennai, Tamil Nadu, India</span>
+            </li>
+            <li class="flex items-center space-x-2.5">
+              <i class="fa-solid fa-phone text-gold"></i>
+              <a href="tel:+919110231866" class="hover:text-gold transition-colors font-medium">+91 9110231866</a>
+            </li>
+            <li class="flex items-center space-x-2.5">
+              <i class="fa-solid fa-envelope text-gold"></i>
+              <a href="mailto:Atcreations@gmail.com" class="hover:text-gold transition-colors">Atcreations@gmail.com</a>
+            </li>
+            <li class="flex items-center space-x-2.5">
+              <i class="fa-regular fa-clock text-gold"></i>
+              <span>Mon - Sat: 10:00 AM - 8:00 PM IST (By Appointment)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Direct Actions -->
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="font-serif text-lg font-bold text-gold-champagne tracking-wider uppercase">Consultation Concierge</h4>
+          <p class="text-xs text-silk-linen/80 leading-relaxed font-light">
+            Planning your wedding blouse or trousseau? Connect with Kavya on WhatsApp for personalized design ideas, neckline sketches, and fabric inquiries.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 pt-1">
+            <a href="https://wa.me/919110231866?text=Hello%20Kavya%20%26%20AT%20Creations%20team%2C%20I%20would%20like%20to%20schedule%20a%20bridal%20embroidery%20consultation." target="_blank" rel="noopener" class="px-5 py-2.5 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>WhatsApp Us</span>
+            </a>
+            <button onclick="openConsultationModal()" class="px-5 py-2.5 rounded-full border border-gold/50 text-gold-champagne hover:bg-gold/10 font-semibold text-xs uppercase tracking-wider transition-colors">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Subfooter -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-silk-linen/60 gap-4">
+        <p>&copy; 2026 AT Creations Handcrafted Studio. All rights reserved.</p>
+        <p class="flex items-center gap-1.5">
+          <span>Mannivakkam Atelier</span>
+          <span class="text-gold">&bull;</span>
+          <span>Chennai, India</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: Book Consultation Form -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-silk-ivory rounded-2xl max-w-lg w-full p-6 sm:p-8 border border-gold/50 shadow-2xl relative">
+      <button onclick="closeConsultationModal()" class="absolute top-4 right-4 text-maroon-900 hover:text-gold transition-colors w-8 h-8 rounded-full bg-silk-linen flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="text-xs uppercase tracking-widest text-gold-dark font-bold">Studio Appointment</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-maroon-900 mt-1">Book Design Dialogue</h3>
+        <p class="text-xs text-espresso/70 mt-1">Schedule a session with Lead Designer Kavya Shyamsundar.</p>
+      </div>
+
+      <form onsubmit="handleConsultationSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Your Name</label>
+          <input type="text" id="consult-name" required placeholder="Full Name" class="w-full bg-white border border-gold/50 rounded-lg px-3.5 py-2 text-xs text-maroon-900 focus:outline-none focus:border-maroon-800">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Phone / WhatsApp</label>
+            <input type="tel" id="consult-phone" required placeholder="+91..." class="w-full bg-white border border-gold/50 rounded-lg px-3.5 py-2 text-xs text-maroon-900 focus:outline-none focus:border-maroon-800">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Preferred Mode</label>
+            <select id="consult-mode" class="w-full bg-white border border-gold/50 rounded-lg px-3.5 py-2 text-xs text-maroon-900 focus:outline-none focus:border-maroon-800">
+              <option value="WhatsApp Video Call">WhatsApp Video Call</option>
+              <option value="Physical Visit (Mannivakkam)">Studio Visit (Mannivakkam)</option>
+              <option value="Phone Call Discussion">Phone Call</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Occasion / Garment Type</label>
+          <input type="text" id="consult-focus" placeholder="e.g. Muhurtham Bridal Blouse, Sangeet Kurti..." class="w-full bg-white border border-gold/50 rounded-lg px-3.5 py-2 text-xs text-maroon-900 focus:outline-none focus:border-maroon-800">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-maroon-900 mb-1">Target Occasion Date</label>
+          <input type="date" id="consult-date" class="w-full bg-white border border-gold/50 rounded-lg px-3.5 py-2 text-xs text-maroon-900 focus:outline-none focus:border-maroon-800">
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-full bg-maroon-800 hover:bg-maroon-900 text-gold-champagne font-semibold text-xs uppercase tracking-wider shadow transition-colors flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base text-gold"></i>
+          <span>Confirm & Connect on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick-Chat Concierge -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <div id="whatsapp-tooltip" class="mb-2 bg-maroon-950 text-gold-champagne px-3 py-1.5 rounded-xl shadow-lg border border-gold/40 text-[11px] font-medium hidden sm:flex items-center gap-1.5 animate-bounce">
+      <span>Chat with Kavya at Studio</span>
+      <button onclick="document.getElementById('whatsapp-tooltip').style.display='none'" class="text-white/60 hover:text-white ml-1">&times;</button>
+    </div>
+
+    <a 
+      href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20bridal%20embroidery%20for%20an%20upcoming%20occasion." 
+      target="_blank" 
+      rel="noopener" 
+      aria-label="Direct WhatsApp Chat with AT Creations" 
+      class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white focus:outline-none"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    // State tracking for the Bespoke Inquiry Flow
+    let inquiryState = {
+      garment: 'Bridal Blouse',
+      technique: 'Handcrafted Aari Work',
+      motif: 'Traditional Peacock & Birds'
+    };
+
+    // Mobile Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+      }
+    }
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Step Navigation
+    function goToStep(stepNumber) {
+      for (let i = 1; i <= 3; i++) {
+        const content = document.getElementById(`step-content-${i}`);
+        const tab = document.getElementById(`step-tab-${i}`);
+        if (content && tab) {
+          if (i === stepNumber) {
+            content.classList.remove('hidden');
+            tab.classList.add('border-maroon-800', 'text-maroon-900');
+            tab.classList.remove('border-transparent', 'text-espresso/60');
+          } else {
+            content.classList.add('hidden');
+            tab.classList.remove('border-maroon-800', 'text-maroon-900');
+            tab.classList.add('border-transparent', 'text-espresso/60');
+          }
+        }
+      }
+    }
+
+    // Garment selection
+    function selectGarment(name) {
+      inquiryState.garment = name;
+      
+      document.querySelectorAll('.garment-option').forEach(el => {
+        el.classList.remove('border-maroon-800', 'bg-maroon-50/70');
+        el.classList.add('border-silk-border', 'bg-white');
+      });
+      event.currentTarget.classList.remove('border-silk-border', 'bg-white');
+      event.currentTarget.classList.add('border-maroon-800', 'bg-maroon-50/70');
+      
+      updateSummaryBanner();
+    }
+
+    // Technique selection
+    function selectTechnique(name) {
+      inquiryState.technique = name;
+      
+      document.querySelectorAll('.technique-option').forEach(el => {
+        el.classList.remove('border-maroon-800', 'bg-maroon-50');
+        el.classList.add('border-silk-border', 'bg-white');
+      });
+      event.currentTarget.classList.remove('border-silk-border', 'bg-white');
+      event.currentTarget.classList.add('border-maroon-800', 'bg-maroon-50');
+
+      updateSummaryBanner();
+    }
+
+    // Motif selection
+    function selectMotif(motifName) {
+      inquiryState.motif = motifName;
+
+      document.querySelectorAll('.motif-option').forEach(el => {
+        el.classList.remove('border-maroon-800', 'bg-maroon-50');
+        el.classList.add('border-silk-border', 'bg-white');
+      });
+      event.currentTarget.classList.remove('border-silk-border', 'bg-white');
+      event.currentTarget.classList.add('border-maroon-800', 'bg-maroon-50');
+
+      updateSummaryBanner();
+    }
+
+    // Pre-fill from craft cards
+    function prefillGarment(techniqueName) {
+      inquiryState.technique = techniqueName;
+      document.getElementById('customizer').scrollIntoView({ behavior: 'smooth' });
+      goToStep(2);
+    }
+
+    function updateSummaryBanner() {
+      const summaryEl = document.getElementById('inquiry-summary-text');
+      if (summaryEl) {
+        summaryEl.innerText = `${inquiryState.garment} • ${inquiryState.technique} • ${inquiryState.motif}`;
+      }
+    }
+
+    // WhatsApp Dispatch for Custom Inquiry
+    function dispatchBespokeWhatsApp() {
+      const name = document.getElementById('inquiry-name').value.trim() || 'Bride / Client';
+      const phone = document.getElementById('inquiry-phone').value.trim() || 'Not provided';
+      const city = document.getElementById('inquiry-city').value.trim() || 'Direct Inquiry';
+      const date = document.getElementById('inquiry-date').value || 'Flexible';
+      const fabric = document.getElementById('inquiry-fabric').value;
+      const consultMode = document.getElementById('inquiry-consult-mode').value;
+      const notes = document.getElementById('inquiry-notes').value.trim() || 'None';
+
+      const message = `*Bespoke Commission Inquiry - AT Creations*\n\n` +
+        `👤 *Client Name:* ${name}\n` +
+        `📱 *Contact:* ${phone}\n` +
+        `📍 *Location:* ${city}\n` +
+        `👗 *Garment Canvas:* ${inquiryState.garment}\n` +
+        `🪡 *Embroidery Style:* ${inquiryState.technique}\n` +
+        `✨ *Preferred Motif:* ${inquiryState.motif}\n` +
+        `🧵 *Fabric Details:* ${fabric}\n` +
+        `🗓 *Target Occasion Date:* ${date}\n` +
+        `🎥 *Preferred Consultation:* ${consultMode}\n` +
+        `📝 *Design Notes:* ${notes}\n\n` +
+        `_Transmitted via AT Creations Mannivakkam Atelier Portal_`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/919110231866?text=${encoded}`, '_blank');
+    }
+
+    // Consultation Modal Logic
+    function openConsultationModal() {
+      const modal = document.getElementById('consultation-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeConsultationModal() {
+      const modal = document.getElementById('consultation-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleConsultationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('consult-name').value;
+      const phone = document.getElementById('consult-phone').value;
+      const mode = document.getElementById('consult-mode').value;
+      const focus = document.getElementById('consult-focus').value || 'Bridal Embroidery';
+      const date = document.getElementById('consult-date').value || 'Upcoming Season';
+
+      const msg = `*Design Consultation Appointment - AT Creations*\n\n` +
+        `👤 *Name:* ${name}\n` +
+        `📱 *Phone / WhatsApp:* ${phone}\n` +
+        `🎥 *Consultation Mode:* ${mode}\n` +
+        `✨ *Garment / Occasion:* ${focus}\n` +
+        `🗓 *Preferred Date:* ${date}\n\n` +
+        `Please confirm our appointment slot with Kavya Shyamsundar at the Mannivakkam studio.`;
+
+      closeConsultationModal();
+      window.open(`https://wa.me/919110231866?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // ESC to close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeConsultationModal();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      updateSummaryBanner();
+    });
+  </script>
+
+</body>
+</html>
