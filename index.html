@@ -16,7 +16,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -24,37 +24,22 @@
       theme: {
         extend: {
           colors: {
-            maroon: {
-              950: '#2A060C',
-              900: '#3D0A12',
-              850: '#4A0E17',
-              800: '#5C121D',
-              700: '#731826',
-              600: '#8C1F30',
-              50: '#FDF7F8'
-            },
-            gold: {
-              deep: '#825F1E',
-              burnished: '#9E782F',
-              antique: '#B89047',
-              champagne: '#D6B475',
-              pale: '#F3E5C8',
-              surface: '#FBF6ED',
-              hairline: 'rgba(158, 120, 47, 0.22)'
-            },
-            ivory: {
-              50: '#FFFFFF',
-              100: '#FAF8F5',
-              200: '#F5F1EB',
-              300: '#EFE9E0',
-              400: '#E5DDD0'
-            },
-            charcoal: {
-              900: '#171213',
-              800: '#261F21',
-              700: '#3D3436',
-              600: '#544A4C',
-              500: '#786C6E'
+            royal: {
+              canvas: '#EFE5D8',
+              surface: '#F8F2E9',
+              card: '#FCF9F3',
+              deepWine: '#4E0D1B',
+              imperialWine: '#6B1426',
+              softWine: '#892338',
+              blushWine: '#F1E1E4',
+              goldDeep: '#7A5B1D',
+              goldGilded: '#A88034',
+              goldAntique: '#C29B4E',
+              goldChampagne: '#DFBD78',
+              goldPale: '#F3E4C3',
+              espresso: '#200A10',
+              charcoal: '#3B2329',
+              muted: '#695156'
             }
           },
           fontFamily: {
@@ -66,14 +51,14 @@
             'subtle': '0.04em',
             'luxury': '0.08em',
             'wide-luxury': '0.14em',
-            'caps': '0.20em',
-            'grand': '0.28em'
+            'caps': '0.22em',
+            'grand': '0.32em'
           },
           boxShadow: {
-            'atelier': '0 12px 35px -8px rgba(74, 14, 23, 0.08)',
-            'atelier-hover': '0 20px 45px -10px rgba(74, 14, 23, 0.14)',
-            'gold-soft': '0 6px 20px -2px rgba(184, 144, 71, 0.18)',
-            'crest': '0 4px 18px rgba(158, 120, 47, 0.16)'
+            'royal-subtle': '0 8px 24px -2px rgba(78, 13, 27, 0.08), 0 3px 8px -1px rgba(168, 128, 52, 0.08)',
+            'royal-hover': '0 22px 42px -6px rgba(78, 13, 27, 0.16), 0 8px 20px -2px rgba(168, 128, 52, 0.2)',
+            'royal-crest': '0 6px 20px rgba(122, 91, 29, 0.25)',
+            'gilded-glow': '0 0 25px rgba(194, 155, 78, 0.35)'
           }
         }
       }
@@ -103,489 +88,651 @@
         overflow: hidden !important;
       }
     }
-    .bg-silk-noise {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+    body {
+      background-color: #EFE5D8;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(223, 189, 120, 0.28) 0px, transparent 48%),
+        radial-gradient(at 100% 10%, rgba(107, 20, 38, 0.16) 0px, transparent 52%),
+        radial-gradient(at 15% 55%, rgba(241, 225, 228, 0.7) 0px, transparent 50%),
+        radial-gradient(at 88% 85%, rgba(194, 155, 78, 0.25) 0px, transparent 55%),
+        radial-gradient(at 50% 100%, rgba(78, 13, 27, 0.12) 0px, transparent 65%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
     }
     .text-metallic-gold {
-      background: linear-gradient(135deg, #7A5716 0%, #B89047 50%, #825F1E 100%);
+      background: linear-gradient(135deg, #7A5B1D 0%, #C29B4E 45%, #E8CD90 70%, #A88034 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .border-gold-subtle {
-      border-color: rgba(158, 120, 47, 0.22);
+    .text-metallic-wine {
+      background: linear-gradient(135deg, #3D0914 0%, #6B1426 50%, #892338 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .royal-glass-card {
+      background: rgba(252, 249, 243, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(194, 155, 78, 0.38);
+    }
+    .royal-glass-header {
+      background: rgba(239, 229, 216, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(194, 155, 78, 0.32);
+    }
+    .floating-box {
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .floating-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 42px -6px rgba(78, 13, 27, 0.16), 0 8px 20px -2px rgba(168, 128, 52, 0.2);
+      border-color: rgba(168, 128, 52, 0.65);
+    }
+    .float-motion {
+      animation: floatSmooth 7s ease-in-out infinite alternate;
+    }
+    @keyframes floatSmooth {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(0.4deg); }
+    }
+    .glow-pulse {
+      animation: ambientPulse 7s ease-in-out infinite alternate;
+    }
+    @keyframes ambientPulse {
+      0% { opacity: 0.35; transform: scale(1); }
+      100% { opacity: 0.65; transform: scale(1.08); }
+    }
+    .radar-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 9999px;
+      border: 2px solid #25D366;
+      opacity: 0.8;
+      animation: radarPulse 2.3s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    @keyframes radarPulse {
+      75%, 100% {
+        transform: scale(1.65);
+        opacity: 0;
+      }
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
     }
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 7px;
     }
     ::-webkit-scrollbar-track {
-      background: #FAF8F5;
+      background: #EFE5D8;
     }
     ::-webkit-scrollbar-thumb {
-      background: #B89047;
+      background: #C29B4E;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #9E782F;
-    }
-    ::selection {
-      background: transparent;
-      color: inherit;
+      background: #A88034;
     }
   </style>
 </head>
 
-<body class="bg-ivory-100 text-charcoal-800 font-body antialiased bg-silk-noise overflow-x-hidden min-h-screen relative">
+<body class="text-royal-espresso font-body antialiased overflow-x-hidden min-h-screen relative selection:bg-transparent">
 
-  <div id="security-lockout" class="fixed inset-0 z-[99999] bg-ivory-100/98 backdrop-blur-xl items-center justify-center text-center p-6 hidden">
-    <div class="max-w-md p-8 rounded-3xl border border-gold-burnished/40 bg-white shadow-atelier space-y-4">
-      <div class="w-14 h-14 rounded-full border border-gold-burnished/60 bg-gold-surface flex items-center justify-center text-maroon-850 mx-auto text-xl shadow-crest">
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-[650px] h-[650px] bg-gradient-to-br from-royal-goldChampagne/30 via-royal-blushWine/40 to-transparent rounded-full blur-[140px] glow-pulse"></div>
+    <div class="absolute top-1/3 -right-36 w-[700px] h-[700px] bg-gradient-to-bl from-royal-imperialWine/18 via-royal-goldPale/35 to-transparent rounded-full blur-[155px] glow-pulse" style="animation-delay: -3.5s;"></div>
+    <div class="absolute -bottom-36 left-1/4 w-[760px] h-[600px] bg-gradient-to-tr from-royal-goldAntique/25 via-royal-surface to-transparent rounded-full blur-[150px] glow-pulse" style="animation-delay: -1.8s;"></div>
+  </div>
+
+  <div id="security-lockout" class="fixed inset-0 z-[99999] bg-royal-canvas/98 backdrop-blur-2xl items-center justify-center text-center p-6 hidden">
+    <div class="max-w-md p-8 sm:p-10 rounded-3xl border border-royal-goldAntique/60 bg-royal-card shadow-royal-hover space-y-5">
+      <div class="w-16 h-16 rounded-full border border-royal-goldAntique bg-royal-surface flex items-center justify-center text-royal-deepWine mx-auto text-2xl shadow-royal-crest">
         <i class="fa-solid fa-shield-halved"></i>
       </div>
-      <h2 class="font-serif text-2xl text-maroon-900 font-medium">Atelier Security Notice</h2>
-      <p class="font-body text-xs text-charcoal-600 leading-relaxed">
-        Developer tools and inspection utilities are restricted to preserve proprietary needlework patterns and bespoke design assets.
+      <div class="space-y-2">
+        <span class="font-sans text-[10px] uppercase tracking-grand text-royal-goldDeep font-bold">Atelier Security Notice</span>
+        <h2 class="font-serif text-2xl text-royal-deepWine font-semibold">Protected Heritage Content</h2>
+      </div>
+      <p class="font-body text-xs text-royal-charcoal leading-relaxed">
+        Developer tools, page inspection, and content duplication are restricted to safeguard proprietary bridal needlecraft motifs and custom atelier patterns.
       </p>
-      <button onclick="window.location.reload()" class="px-6 py-2.5 rounded-full bg-maroon-850 text-white font-sans text-xs uppercase tracking-luxury font-semibold hover:bg-maroon-800 transition-colors">
-        Reload Page
+      <button onclick="window.location.reload()" class="px-7 py-3 rounded-full bg-royal-deepWine text-royal-goldPale font-sans text-xs uppercase tracking-luxury font-semibold hover:bg-royal-imperialWine transition-colors shadow-sm">
+        Reload Experience
       </button>
     </div>
   </div>
 
-  <header id="masthead" class="sticky top-0 z-[100] w-full bg-ivory-100/95 backdrop-blur-xl border-b border-gold-subtle shadow-sm transition-all duration-300">
+  <header id="masthead" class="sticky top-0 z-[100] w-full royal-glass-header shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
       <div class="flex items-center justify-between h-20 sm:h-24 gap-3 sm:gap-6">
         
         <div class="flex-shrink-0 flex items-center z-20">
-          <a href="#" class="flex items-center gap-3 sm:gap-4 group cursor-pointer focus:outline-none">
-            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gold-burnished/50 bg-gold-surface flex items-center justify-center text-maroon-850 shadow-crest group-hover:border-gold-antique group-hover:bg-maroon-850 group-hover:text-gold-pale transition-all duration-300 flex-shrink-0">
-              <span class="font-serif italic font-semibold text-base sm:text-lg leading-none">AT</span>
+          <a href="#" class="flex items-center gap-3.5 group cursor-pointer focus:outline-none">
+            <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-royal-goldAntique bg-gradient-to-br from-royal-card to-royal-surface flex items-center justify-center text-royal-deepWine shadow-royal-crest group-hover:border-royal-deepWine group-hover:scale-105 transition-all duration-500 flex-shrink-0 overflow-hidden">
+              <span class="font-serif italic font-semibold text-lg sm:text-xl leading-none z-10">AT</span>
             </div>
             <div class="flex flex-col text-left">
-              <span class="font-serif text-xl sm:text-2xl lg:text-3xl tracking-subtle uppercase text-maroon-900 group-hover:text-maroon-700 transition-colors font-semibold leading-tight">
+              <span class="font-serif text-xl sm:text-2xl lg:text-3xl tracking-subtle uppercase text-royal-deepWine group-hover:text-royal-imperialWine transition-colors font-semibold leading-tight">
                 AT Creations
               </span>
-              <span class="font-sans text-[8px] sm:text-[9px] uppercase tracking-wide-luxury text-gold-deep font-semibold leading-none mt-0.5">
+              <span class="font-sans text-[8px] sm:text-[9px] uppercase tracking-wide-luxury text-royal-goldDeep font-semibold leading-none mt-1">
                 Haute Needlework &bull; Chennai Atelier
               </span>
             </div>
           </a>
         </div>
 
-        <nav class="hidden xl:flex items-center justify-center space-x-8 2xl:space-x-10 text-[11px] uppercase tracking-wide-luxury font-sans font-semibold text-charcoal-700 whitespace-nowrap">
-          <a href="#matrix" class="hover:text-maroon-850 transition-colors py-2 px-1 relative group">
-            Craft Matrix
-            <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-maroon-850 transition-all duration-300 group-hover:w-full"></span>
+        <nav class="hidden xl:flex items-center justify-center space-x-8 2xl:space-x-10 text-[11px] uppercase tracking-wide-luxury font-sans font-semibold text-royal-charcoal whitespace-nowrap">
+          <a href="#matrix" class="hover:text-royal-deepWine transition-colors py-2 px-1 relative group">
+            The Craft Matrix
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-royal-goldAntique to-royal-deepWine transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#materials" class="hover:text-maroon-850 transition-colors py-2 px-1 relative group">
+          <a href="#materials" class="hover:text-royal-deepWine transition-colors py-2 px-1 relative group">
             Material Archive
-            <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-maroon-850 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-royal-goldAntique to-royal-deepWine transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#journey" class="hover:text-maroon-850 transition-colors py-2 px-1 relative group">
+          <a href="#journey" class="hover:text-royal-deepWine transition-colors py-2 px-1 relative group">
             Bespoke Journey
-            <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-maroon-850 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-royal-goldAntique to-royal-deepWine transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#briefing-studio" class="hover:text-maroon-850 transition-colors py-2 px-1 text-maroon-850 font-bold relative group">
+          <a href="#briefing-studio" class="hover:text-royal-deepWine transition-colors py-2 px-1 text-royal-deepWine font-bold relative group">
             Commission Brief
-            <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-maroon-850 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-royal-deepWine transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
         <div class="flex items-center gap-2.5 sm:gap-4 flex-shrink-0 z-20">
-          <button onclick="openConsultationModal()" class="relative group overflow-hidden px-4 sm:px-7 py-2.5 sm:py-3 rounded-full bg-maroon-850 hover:bg-maroon-800 text-gold-pale text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-luxury border border-gold-burnished/40 shadow-atelier hover:shadow-atelier-hover transition-all duration-300 whitespace-nowrap">
-            <span class="relative z-10 flex items-center gap-1.5 sm:gap-2.5">
-              <i class="fa-regular fa-calendar-check text-gold-champagne text-xs"></i>
-              <span class="hidden xs:inline sm:inline">Book Consultation</span>
-              <span class="inline xs:hidden sm:hidden">Consult</span>
+          <button onclick="openConsultationModal()" class="relative group overflow-hidden px-5 sm:px-7 py-2.5 sm:py-3 rounded-full bg-royal-deepWine hover:bg-royal-imperialWine text-royal-goldPale text-[10px] sm:text-xs font-sans font-semibold uppercase tracking-luxury border border-royal-goldAntique/50 shadow-royal-subtle hover:shadow-royal-hover transition-all duration-300 whitespace-nowrap">
+            <span class="relative z-10 flex items-center gap-2">
+              <i class="fa-regular fa-calendar-check text-royal-goldChampagne text-xs"></i>
+              <span>Book Consultation</span>
             </span>
-            <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform ease-out"></div>
+            <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform ease-out"></div>
           </button>
 
-          <button id="mobile-toggle" class="xl:hidden p-2.5 rounded-lg border border-gold-burnished/40 bg-white text-maroon-850 hover:bg-gold-surface hover:border-gold-antique focus:outline-none transition-colors" aria-label="Toggle Navigation">
-            <i id="mobile-toggle-icon" class="fa-solid fa-bars-staggered text-base sm:text-lg"></i>
+          <button id="mobile-toggle" class="xl:hidden p-2.5 rounded-xl border border-royal-goldAntique/50 bg-royal-card text-royal-deepWine hover:bg-royal-surface transition-all shadow-sm" aria-label="Toggle Navigation">
+            <i id="mobile-toggle-icon" class="fa-solid fa-bars-staggered text-base"></i>
           </button>
         </div>
 
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden xl:hidden w-full bg-ivory-100/98 backdrop-blur-2xl border-t border-gold-subtle px-6 py-7 shadow-2xl transition-all duration-300">
-      <div class="flex flex-col space-y-3.5 text-xs uppercase tracking-wide-luxury font-sans font-semibold text-charcoal-800">
-        <a href="#matrix" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors py-2 flex items-center justify-between border-b border-gold-subtle/40 pb-2.5">
+    <div id="mobile-menu" class="hidden xl:hidden w-full bg-royal-canvas/98 backdrop-blur-2xl border-t border-royal-goldAntique/30 px-6 py-7 shadow-2xl transition-all duration-300">
+      <div class="flex flex-col space-y-3.5 text-xs uppercase tracking-wide-luxury font-sans font-semibold text-royal-charcoal">
+        <a href="#matrix" onclick="toggleMobileMenu()" class="hover:text-royal-deepWine transition-colors py-2 flex items-center justify-between border-b border-royal-goldAntique/25 pb-2.5">
           <span>The Craft Matrix</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-gold-deep"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] text-royal-goldDeep"></i>
         </a>
-        <a href="#materials" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors py-2 flex items-center justify-between border-b border-gold-subtle/40 pb-2.5">
+        <a href="#materials" onclick="toggleMobileMenu()" class="hover:text-royal-deepWine transition-colors py-2 flex items-center justify-between border-b border-royal-goldAntique/25 pb-2.5">
           <span>Material Archive</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-gold-deep"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] text-royal-goldDeep"></i>
         </a>
-        <a href="#journey" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors py-2 flex items-center justify-between border-b border-gold-subtle/40 pb-2.5">
+        <a href="#journey" onclick="toggleMobileMenu()" class="hover:text-royal-deepWine transition-colors py-2 flex items-center justify-between border-b border-royal-goldAntique/25 pb-2.5">
           <span>Bespoke Journey</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-gold-deep"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] text-royal-goldDeep"></i>
         </a>
-        <a href="#briefing-studio" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors text-maroon-850 font-bold py-2 flex items-center justify-between border-b border-gold-subtle/40 pb-2.5">
+        <a href="#briefing-studio" onclick="toggleMobileMenu()" class="hover:text-royal-deepWine transition-colors text-royal-deepWine font-bold py-2 flex items-center justify-between border-b border-royal-goldAntique/25 pb-2.5">
           <span>Commission Briefing Desk</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-maroon-850"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] text-royal-deepWine"></i>
         </a>
-        <a href="#founder" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors py-2 flex items-center justify-between border-b border-gold-subtle/40 pb-2.5">
+        <a href="#founder" onclick="toggleMobileMenu()" class="hover:text-royal-deepWine transition-colors py-2 flex items-center justify-between">
           <span>Founder's Monograph</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-gold-deep"></i>
-        </a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-maroon-850 transition-colors py-2 flex items-center justify-between">
-          <span>Studio Address & Contact</span>
-          <i class="fa-solid fa-chevron-right text-[10px] text-gold-deep"></i>
+          <i class="fa-solid fa-chevron-right text-[10px] text-royal-goldDeep"></i>
         </a>
       </div>
 
-      <div class="mt-6 pt-5 border-t border-gold-subtle flex flex-col gap-3">
-        <div class="flex items-center justify-between text-[11px] font-sans font-medium text-charcoal-700">
-          <a href="mailto:ATcreations@gmail.com" class="hover:text-maroon-850 transition-colors flex items-center gap-1.5">
-            <i class="fa-solid fa-envelope text-gold-deep text-[10px]"></i> ATcreations@gmail.com
+      <div class="mt-6 pt-5 border-t border-royal-goldAntique/30 flex flex-col gap-3">
+        <div class="flex items-center justify-between text-[11px] font-sans font-medium text-royal-charcoal">
+          <a href="mailto:ATcreations@gmail.com" class="hover:text-royal-deepWine transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-royal-goldDeep text-[10px]"></i> ATcreations@gmail.com
           </a>
-          <a href="tel:+919110231866" class="hover:text-maroon-850 transition-colors flex items-center gap-1.5">
-            <i class="fa-solid fa-phone text-gold-deep text-[10px]"></i> +91 9110231866
+          <a href="tel:+919110231866" class="hover:text-royal-deepWine transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-royal-goldDeep text-[10px]"></i> +91 9110231866
           </a>
         </div>
-        <button onclick="toggleMobileMenu(); openConsultationModal();" class="w-full py-3 rounded-full bg-maroon-850 text-white font-sans font-semibold text-xs uppercase tracking-luxury hover:bg-maroon-800 transition-all text-center shadow-md">
-          Book Appointment
+        <button onclick="toggleMobileMenu(); openConsultationModal();" class="w-full py-3.5 rounded-full bg-royal-deepWine text-royal-goldPale font-sans font-semibold text-xs uppercase tracking-luxury hover:bg-royal-imperialWine transition-all text-center shadow-md">
+          Book Studio Appointment
         </button>
       </div>
     </div>
   </header>
 
-  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-gold-subtle py-16 sm:py-24 bg-gradient-to-b from-white via-ivory-100 to-ivory-200">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[480px] bg-gold-pale/35 rounded-full blur-[140px] pointer-events-none"></div>
-    <div class="absolute bottom-10 left-10 w-80 h-80 bg-maroon-850/5 rounded-full blur-[100px] pointer-events-none"></div>
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center space-y-7 sm:space-y-8">
-      <div class="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 rounded-full bg-white border border-gold-burnished/40 text-maroon-900 text-[10px] sm:text-xs font-sans uppercase tracking-wide-luxury shadow-sm">
-        <span class="w-1.5 h-1.5 rounded-full bg-gold-burnished"></span>
+  <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden border-b border-royal-goldAntique/30 py-20 sm:py-28">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center space-y-8">
+      
+      <div class="reveal-on-scroll inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-royal-card/90 backdrop-blur-md border border-royal-goldAntique/40 text-royal-deepWine text-[10px] sm:text-xs font-sans uppercase tracking-wide-luxury shadow-royal-subtle">
+        <span class="w-2 h-2 rounded-full bg-royal-goldGilded animate-pulse"></span>
         <span class="font-semibold">Threaded with creativity, worn with pride</span>
       </div>
 
-      <div class="space-y-3 sm:space-y-4">
-        <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-maroon-950 font-semibold tracking-tight uppercase leading-[0.95] drop-shadow-sm">
+      <div class="reveal-on-scroll space-y-4">
+        <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-royal-deepWine font-semibold tracking-tight uppercase leading-[0.93] drop-shadow-sm">
           AT CREATIONS
         </h1>
 
-        <div class="flex items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto pt-1">
-          <span class="h-[1px] w-10 sm:w-20 bg-gradient-to-r from-transparent to-gold-antique"></span>
+        <div class="flex items-center justify-center gap-3 sm:gap-5 max-w-2xl mx-auto pt-1">
+          <span class="h-[1px] w-12 sm:w-24 bg-gradient-to-r from-transparent via-royal-goldAntique to-royal-goldChampagne"></span>
           <p class="font-serif italic text-lg sm:text-2xl md:text-3xl text-metallic-gold tracking-luxury font-normal whitespace-nowrap">
             Traditional Designs, Modern Touch
           </p>
-          <span class="h-[1px] w-10 sm:w-20 bg-gradient-to-l from-transparent to-gold-antique"></span>
+          <span class="h-[1px] w-12 sm:w-24 bg-gradient-to-l from-transparent via-royal-goldAntique to-royal-goldChampagne"></span>
         </div>
 
-        <p class="font-sans text-[10px] sm:text-xs tracking-grand text-gold-deep uppercase font-semibold">
+        <p class="font-sans text-[10px] sm:text-xs tracking-grand text-royal-goldDeep uppercase font-semibold">
           "Wear Your Story"
         </p>
       </div>
 
-      <p class="font-body text-charcoal-600 text-xs sm:text-base lg:text-lg max-w-2xl mx-auto font-normal leading-relaxed px-2">
-        Welcome to <strong class="text-maroon-900 font-semibold">AT Creations</strong>—a bespoke bridal needlework atelier based in Mannivakkam. We bridge generational Tamil Maggam frame embroidery with contemporary multi-thread architectural precision, crafting heirloom bridal wear tailored uniquely to you.
+      <p class="reveal-on-scroll font-body text-royal-charcoal text-xs sm:text-base lg:text-lg max-w-2xl mx-auto font-normal leading-relaxed px-2">
+        Welcome to <strong class="text-royal-deepWine font-semibold">AT Creations</strong>—a bespoke bridal needlework atelier based in Mannivakkam. We bridge generational Tamil Maggam frame embroidery with contemporary architectural precision, crafting heirloom bridal blouses tailored uniquely to you.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
-        <a href="#briefing-studio" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-maroon-850 hover:bg-maroon-800 text-gold-pale font-sans font-semibold text-xs uppercase tracking-luxury transition-all duration-300 shadow-atelier hover:shadow-atelier-hover hover:scale-[1.02] flex items-center justify-center gap-3">
+      <div class="reveal-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+        <a href="#briefing-studio" class="w-full sm:w-auto px-8 sm:px-9 py-4 rounded-full bg-royal-deepWine hover:bg-royal-imperialWine text-royal-goldPale font-sans font-semibold text-xs uppercase tracking-luxury transition-all duration-300 shadow-royal-subtle hover:shadow-royal-hover hover:-translate-y-1 flex items-center justify-center gap-3 border border-royal-goldAntique/40">
           <span>Begin Bespoke Brief</span>
           <i class="fa-solid fa-arrow-down-long text-xs"></i>
         </a>
         
-        <a href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20embroidery%20for%20an%20upcoming%20occasion." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white hover:bg-gold-surface text-maroon-900 font-sans font-semibold text-xs uppercase tracking-luxury transition-all duration-300 border border-gold-burnished/40 shadow-sm flex items-center justify-center gap-2.5">
-          <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+        <a href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20embroidery%20for%20an%20upcoming%20occasion." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 sm:px-9 py-4 rounded-full bg-royal-card hover:bg-royal-surface text-royal-deepWine font-sans font-semibold text-xs uppercase tracking-luxury transition-all duration-300 border border-royal-goldAntique/50 shadow-royal-subtle hover:shadow-royal-hover hover:-translate-y-1 flex items-center justify-center gap-2.5">
+          <i class="fa-brands fa-whatsapp text-emerald-700 text-base"></i>
           <span>Direct Studio WhatsApp</span>
         </a>
       </div>
 
-      <div class="pt-10 sm:pt-14 border-t border-gold-subtle grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
-        <div class="p-3 rounded-2xl bg-white/60 border border-gold-subtle/50">
-          <span class="block font-serif text-base sm:text-xl text-maroon-900 font-semibold">100% Bespoke</span>
-          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-charcoal-500 mt-1 block">To Your Measurements</span>
+      <div class="reveal-on-scroll pt-12 sm:pt-16 border-t border-royal-goldAntique/30 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+        <div class="p-5 rounded-3xl royal-glass-card floating-box shadow-royal-subtle">
+          <span class="block font-serif text-2xl sm:text-3xl text-royal-deepWine font-semibold">100%</span>
+          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-royal-charcoal mt-1 block">Custom Measurements</span>
         </div>
-        <div class="p-3 rounded-2xl bg-white/60 border border-gold-subtle/50">
-          <span class="block font-serif text-base sm:text-xl text-maroon-900 font-semibold">Heirloom Mediums</span>
-          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-charcoal-500 mt-1 block">Authentic Zari & Cutbead</span>
+        <div class="p-5 rounded-3xl royal-glass-card floating-box shadow-royal-subtle">
+          <span class="block font-serif text-2xl sm:text-3xl text-royal-deepWine font-semibold">Heirloom</span>
+          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-royal-charcoal mt-1 block">Pure Zari & Dabka</span>
         </div>
-        <div class="p-3 rounded-2xl bg-white/60 border border-gold-subtle/50">
-          <span class="block font-serif text-base sm:text-xl text-maroon-900 font-semibold">Artisan Dialogue</span>
-          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-charcoal-500 mt-1 block">With Kavya Shyamsundar</span>
+        <div class="p-5 rounded-3xl royal-glass-card floating-box shadow-royal-subtle">
+          <span class="block font-serif text-2xl sm:text-3xl text-royal-deepWine font-semibold">1-on-1</span>
+          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-royal-charcoal mt-1 block">Artisan Consultation</span>
         </div>
-        <div class="p-3 rounded-2xl bg-white/60 border border-gold-subtle/50">
-          <span class="block font-serif text-base sm:text-xl text-maroon-900 font-semibold">Global Dispatch</span>
-          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-charcoal-500 mt-1 block">India, USA, UK, UAE & Beyond</span>
+        <div class="p-5 rounded-3xl royal-glass-card floating-box shadow-royal-subtle">
+          <span class="block font-serif text-2xl sm:text-3xl text-royal-deepWine font-semibold">Global</span>
+          <span class="font-sans text-[9px] sm:text-[11px] uppercase tracking-luxury text-royal-charcoal mt-1 block">Doorstep Dispatch</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="matrix" class="py-16 sm:py-24 bg-ivory-200 relative border-b border-gold-subtle">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-        <span class="font-sans text-xs uppercase tracking-wide-luxury text-gold-deep font-bold">Artisanal Taxonomy</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-maroon-950 font-semibold">The Craft Matrix</h2>
+  <section id="matrix" class="py-20 sm:py-28 relative border-b border-royal-goldAntique/30 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="reveal-on-scroll text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+        <span class="font-sans text-xs uppercase tracking-wide-luxury text-royal-goldDeep font-bold">Artisanal Taxonomy</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-royal-deepWine font-semibold">The Craft Matrix</h2>
         <div class="flex items-center justify-center gap-3 py-1">
-          <span class="w-12 h-[1px] bg-gold-antique"></span>
-          <span class="text-gold-deep text-xs">&#10022;</span>
-          <span class="w-12 h-[1px] bg-gold-antique"></span>
+          <span class="w-12 h-[1px] bg-royal-goldAntique"></span>
+          <span class="text-royal-goldDeep text-xs">&#10022;</span>
+          <span class="w-12 h-[1px] bg-royal-goldAntique"></span>
         </div>
-        <p class="font-body text-charcoal-600 text-xs sm:text-sm font-normal leading-relaxed">
-          We treat needlecraft not as embellishment, but as sculpture on cloth. Each commission unites classical Maggam timber frames with fine computerized thread arrays.
+        <p class="font-body text-royal-charcoal text-xs sm:text-sm font-normal leading-relaxed">
+          Explore our specialized needlework disciplines. Select any craft to instantly configure your customized bridal brief.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gold-burnished/30 shadow-atelier flex flex-col justify-between hover:shadow-atelier-hover hover:border-gold-antique transition-all duration-300 group">
+        
+        <div class="reveal-on-scroll royal-glass-card floating-box shadow-royal-subtle rounded-3xl p-7 sm:p-8 flex flex-col justify-between group relative overflow-hidden">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-full bg-gold-surface border border-gold-burnished/40 text-maroon-850 flex items-center justify-center text-lg group-hover:scale-105 group-hover:bg-maroon-850 group-hover:text-white transition-all duration-300 shadow-crest">
+            <div class="w-14 h-14 rounded-2xl bg-royal-card border border-royal-goldAntique/60 text-royal-deepWine flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-royal-deepWine group-hover:text-royal-goldPale transition-all duration-300 shadow-royal-crest">
               <i class="fa-solid fa-feather-pointed"></i>
             </div>
             <div>
-              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-gold-deep font-bold block">Discipline I</span>
-              <h3 class="font-serif text-2xl text-maroon-950 mt-1 font-semibold">Handcrafted Aari & Zardozi</h3>
+              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold block">Discipline I</span>
+              <h3 class="font-serif text-2xl text-royal-deepWine mt-1 font-semibold">Handcrafted Aari & Zardozi</h3>
             </div>
-            <p class="font-body text-xs sm:text-sm text-charcoal-600 leading-relaxed font-normal">
-              Stitched slowly on heavy wooden Maggam tension frames using micro-awl hook needles. We weave French wire zardozi coils, real Austrian cutdana beads, rice pearls (moti), and raw Kundan stones.
+            <p class="font-body text-xs sm:text-sm text-royal-charcoal leading-relaxed font-normal">
+              Slowly embroidered on tensioned Maggam wooden frames using micro-hook awls. Features French bullion coils, faceted Austrian cutdana, basra seed pearls (moti), and raw kundan stones.
             </p>
             <div class="pt-2">
-              <ul class="font-body text-xs text-charcoal-700 space-y-2">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Antique Gold & Metallic Dabka Wire</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Sacred Temple Gopuram & Floral Arches</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> 3D Padded Relief Stitching (Gaddi Work)</li>
+              <ul class="font-body text-xs text-royal-charcoal space-y-2">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Antique Gold & Metallic Dabka Wire</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Sacred Temple Gopuram & Floral Arches</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> 3D Padded Relief Stitching (Gaddi Work)</li>
               </ul>
             </div>
           </div>
-          <div class="pt-6 border-t border-gold-subtle mt-6">
-            <button onclick="prefillCommission('Handcrafted Aari Work')" class="w-full py-2.5 rounded-full border border-maroon-850 text-maroon-900 hover:bg-maroon-850 hover:text-white transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold">
-              Inquire Aari Handwork
+          <div class="pt-7 border-t border-royal-goldAntique/30 mt-6">
+            <button onclick="prefillCommission('Handcrafted Aari Work')" class="w-full py-3 rounded-full border border-royal-deepWine text-royal-deepWine bg-royal-surface hover:bg-royal-deepWine hover:text-royal-goldPale transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold flex items-center justify-center gap-2 shadow-sm">
+              <span>Select Aari Handwork</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gold-burnished/30 shadow-atelier flex flex-col justify-between hover:shadow-atelier-hover hover:border-gold-antique transition-all duration-300 group">
+        <div class="reveal-on-scroll royal-glass-card floating-box shadow-royal-subtle rounded-3xl p-7 sm:p-8 flex flex-col justify-between group relative overflow-hidden" style="transition-delay: 150ms;">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-full bg-gold-surface border border-gold-burnished/40 text-maroon-850 flex items-center justify-center text-lg group-hover:scale-105 group-hover:bg-maroon-850 group-hover:text-white transition-all duration-300 shadow-crest">
+            <div class="w-14 h-14 rounded-2xl bg-royal-card border border-royal-goldAntique/60 text-royal-deepWine flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-royal-deepWine group-hover:text-royal-goldPale transition-all duration-300 shadow-royal-crest">
               <i class="fa-solid fa-microchip"></i>
             </div>
             <div>
-              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-gold-deep font-bold block">Discipline II</span>
-              <h3 class="font-serif text-2xl text-maroon-950 mt-1 font-semibold">Machine Embroidery</h3>
+              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold block">Discipline II</span>
+              <h3 class="font-serif text-2xl text-royal-deepWine mt-1 font-semibold">Machine Embroidery</h3>
             </div>
-            <p class="font-body text-xs sm:text-sm text-charcoal-600 leading-relaxed font-normal">
-              High-density computerized needlework calibrated for flawless geometric repetition, crisp architectural jaals, and lightweight occasion wear with vibrant multi-hued resham silk threads.
+            <p class="font-body text-xs sm:text-sm text-royal-charcoal leading-relaxed font-normal">
+              Computerized multi-thread precision calibrated for flawless geometric repetition, crisp architectural jaals, and balanced lightweight occasion wear with multi-hued resham silk threads.
             </p>
             <div class="pt-2">
-              <ul class="font-body text-xs text-charcoal-700 space-y-2">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Architectural Jaal & Geometric Trellises</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Multi-Shade Resham Silk Shading</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Crisp, Even Borders for Occasion Sarees</li>
+              <ul class="font-body text-xs text-royal-charcoal space-y-2">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Architectural Jaal & Trellis Geometry</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Multi-Shade Resham Silk Shading</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Symmetrical Precision for Festive Sarees</li>
               </ul>
             </div>
           </div>
-          <div class="pt-6 border-t border-gold-subtle mt-6">
-            <button onclick="prefillCommission('Machine Embroidery')" class="w-full py-2.5 rounded-full border border-maroon-850 text-maroon-900 hover:bg-maroon-850 hover:text-white transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold">
-              Inquire Machine Work
+          <div class="pt-7 border-t border-royal-goldAntique/30 mt-6">
+            <button onclick="prefillCommission('Machine Embroidery')" class="w-full py-3 rounded-full border border-royal-deepWine text-royal-deepWine bg-royal-surface hover:bg-royal-deepWine hover:text-royal-goldPale transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold flex items-center justify-center gap-2 shadow-sm">
+              <span>Select Machine Work</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gold-burnished/30 shadow-atelier flex flex-col justify-between hover:shadow-atelier-hover hover:border-gold-antique transition-all duration-300 group">
+        <div class="reveal-on-scroll royal-glass-card floating-box shadow-royal-subtle rounded-3xl p-7 sm:p-8 flex flex-col justify-between group relative overflow-hidden" style="transition-delay: 300ms;">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-full bg-gold-surface border border-gold-burnished/40 text-maroon-850 flex items-center justify-center text-lg group-hover:scale-105 group-hover:bg-maroon-850 group-hover:text-white transition-all duration-300 shadow-crest">
+            <div class="w-14 h-14 rounded-2xl bg-royal-card border border-royal-goldAntique/60 text-royal-deepWine flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-royal-deepWine group-hover:text-royal-goldPale transition-all duration-300 shadow-royal-crest">
               <i class="fa-solid fa-scissors"></i>
             </div>
             <div>
-              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-gold-deep font-bold block">Discipline III</span>
-              <h3 class="font-serif text-2xl text-maroon-950 mt-1 font-semibold">Bespoke Couture Fusion</h3>
+              <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold block">Discipline III</span>
+              <h3 class="font-serif text-2xl text-royal-deepWine mt-1 font-semibold">Bespoke Couture Fusion</h3>
             </div>
-            <p class="font-body text-xs sm:text-sm text-charcoal-600 leading-relaxed font-normal">
+            <p class="font-body text-xs sm:text-sm text-royal-charcoal leading-relaxed font-normal">
               Tailored specifically from your bridal color palette, saree drape, and silhouette preferences. Incorporates custom couple monograms, auspicious dates, and neckline sculpting.
             </p>
             <div class="pt-2">
-              <ul class="font-body text-xs text-charcoal-700 space-y-2">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Hand-Rendered Couple Monogram Crests</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Kanchipuram Brocade Color Harmonization</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-deep text-[10px]"></i> Coordinated Trousseau & Family Blouses</li>
+              <ul class="font-body text-xs text-royal-charcoal space-y-2">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Hand-Rendered Couple Monogram Crests</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Kanchipuram Brocade Harmonization</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-royal-goldDeep text-[10px]"></i> Coordinated Trousseau & Family Blouses</li>
               </ul>
             </div>
           </div>
-          <div class="pt-6 border-t border-gold-subtle mt-6">
-            <button onclick="prefillCommission('Bespoke Fusion')" class="w-full py-2.5 rounded-full border border-maroon-850 text-maroon-900 hover:bg-maroon-850 hover:text-white transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold">
-              Start Bespoke Brief
+          <div class="pt-7 border-t border-royal-goldAntique/30 mt-6">
+            <button onclick="prefillCommission('Bespoke Fusion')" class="w-full py-3 rounded-full border border-royal-deepWine text-royal-deepWine bg-royal-surface hover:bg-royal-deepWine hover:text-royal-goldPale transition-all duration-300 font-sans text-xs uppercase tracking-luxury font-semibold flex items-center justify-center gap-2 shadow-sm">
+              <span>Select Bespoke Fusion</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="materials" class="py-16 sm:py-24 bg-ivory-100 relative border-b border-gold-subtle">
+  <section id="materials" class="py-20 sm:py-28 relative border-b border-royal-goldAntique/30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-        <span class="font-sans text-xs uppercase tracking-wide-luxury text-gold-deep font-bold">Provenance & Purity</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-maroon-950 font-semibold">Material & Thread Archive</h2>
-        <p class="font-body text-charcoal-600 text-xs sm:text-sm font-normal">
-          We use strictly non-tarnishing metallic wires, certified raw mulberry silks, and jewel-grade crystals.
+      
+      <div class="reveal-on-scroll text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+        <span class="font-sans text-xs uppercase tracking-wide-luxury text-royal-goldDeep font-bold">Provenance & Purity</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-royal-deepWine font-semibold">Material & Thread Archive</h2>
+        <p class="font-body text-royal-charcoal text-xs sm:text-sm font-normal">
+          Click any material swatch to inspect its physical luster, weight, and bridal application.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-        <div class="bg-white border border-gold-subtle rounded-2xl p-6 shadow-sm hover:shadow-atelier hover:border-gold-antique transition-all">
-          <div class="font-serif italic text-3xl text-gold-deep mb-2 font-semibold">01</div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">French Wire Dabka</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed">
-            Coiled electroplated copper wire that reflects light with an antique candlelight sheen. Resists oxidative discoloration.
-          </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 mb-8">
+        <div onclick="selectMaterialSwatch(0)" id="swatch-0" class="material-swatch-card active cursor-pointer p-4 rounded-2xl border-2 border-royal-deepWine bg-royal-card text-center transition-all shadow-royal-subtle">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-100/90 border border-royal-goldAntique flex items-center justify-center text-royal-goldDeep mb-2 shadow-sm">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">French Dabka</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold block mt-0.5">Metallic Wire</span>
         </div>
 
-        <div class="bg-white border border-gold-subtle rounded-2xl p-6 shadow-sm hover:shadow-atelier hover:border-gold-antique transition-all">
-          <div class="font-serif italic text-3xl text-gold-deep mb-2 font-semibold">02</div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Austrian Cutbeads</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed">
-            Precision micro-cylinders faceted to catch ambient banquet lights without adding cumbersome weight to your blouse sleeves.
-          </p>
+        <div onclick="selectMaterialSwatch(1)" id="swatch-1" class="material-swatch-card cursor-pointer p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/90 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card shadow-sm">
+          <div class="w-10 h-10 mx-auto rounded-full bg-stone-200/80 border border-royal-goldAntique/40 flex items-center justify-center text-royal-charcoal mb-2">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">Austrian Beads</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-muted font-bold block mt-0.5">Cutdana</span>
         </div>
 
-        <div class="bg-white border border-gold-subtle rounded-2xl p-6 shadow-sm hover:shadow-atelier hover:border-gold-antique transition-all">
-          <div class="font-serif italic text-3xl text-gold-deep mb-2 font-semibold">03</div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Pure Mulberry Silk</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed">
-            High-GSM raw and dupion silks that endure dense maggam embroidery needle tension without tearing or sagging.
-          </p>
+        <div onclick="selectMaterialSwatch(2)" id="swatch-2" class="material-swatch-card cursor-pointer p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/90 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card shadow-sm">
+          <div class="w-10 h-10 mx-auto rounded-full bg-rose-100/80 border border-royal-goldAntique/40 flex items-center justify-center text-royal-deepWine mb-2">
+            <i class="fa-solid fa-scroll"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">Mulberry Silk</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-muted font-bold block mt-0.5">Raw Canvas</span>
         </div>
 
-        <div class="bg-white border border-gold-subtle rounded-2xl p-6 shadow-sm hover:shadow-atelier hover:border-gold-antique transition-all">
-          <div class="font-serif italic text-3xl text-gold-deep mb-2 font-semibold">04</div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Basra Seed Pearls (Moti)</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed">
-            Hand-strung micro seed pearls used to frame zardozi medallions and neckline contours in classical South Indian bridal grammar.
-          </p>
+        <div onclick="selectMaterialSwatch(3)" id="swatch-3" class="material-swatch-card cursor-pointer p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/90 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card shadow-sm">
+          <div class="w-10 h-10 mx-auto rounded-full bg-yellow-100/80 border border-royal-goldAntique/40 flex items-center justify-center text-royal-goldDeep mb-2">
+            <i class="fa-solid fa-circle text-xs"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">Basra Moti</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-muted font-bold block mt-0.5">Micro Pearls</span>
+        </div>
+
+        <div onclick="selectMaterialSwatch(4)" id="swatch-4" class="material-swatch-card cursor-pointer p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/90 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card shadow-sm">
+          <div class="w-10 h-10 mx-auto rounded-full bg-amber-100/80 border border-royal-goldAntique/40 flex items-center justify-center text-amber-800 mb-2">
+            <i class="fa-solid fa-cubes-stacked"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">Antique Zari</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-muted font-bold block mt-0.5">Surat Spun</span>
+        </div>
+
+        <div onclick="selectMaterialSwatch(5)" id="swatch-5" class="material-swatch-card cursor-pointer p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/90 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card shadow-sm">
+          <div class="w-10 h-10 mx-auto rounded-full bg-rose-200/60 border border-royal-goldAntique/40 flex items-center justify-center text-royal-deepWine mb-2">
+            <i class="fa-solid fa-vest"></i>
+          </div>
+          <h4 class="font-serif text-sm text-royal-deepWine font-semibold">Silk Velvet</h4>
+          <span class="font-sans text-[9px] uppercase tracking-wide-luxury text-royal-muted font-bold block mt-0.5">Rich Base</span>
         </div>
       </div>
+
+      <div id="material-inspect-panel" class="reveal-on-scroll royal-glass-card floating-box rounded-3xl p-6 sm:p-10 border border-royal-goldAntique/50 shadow-royal-hover transition-all duration-300">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-royal-surface border border-royal-goldAntique/50 text-royal-goldDeep text-[10px] uppercase font-sans font-bold tracking-luxury shadow-sm">
+              <span id="inspect-tag">Medium Classification: Pure Copper Spiral Wire</span>
+            </div>
+            <h3 id="inspect-title" class="font-serif text-2xl sm:text-3xl lg:text-4xl text-royal-deepWine font-semibold">
+              French Wire Dabka &bull; Electroplated Antique Sheen
+            </h3>
+            <p id="inspect-desc" class="font-body text-xs sm:text-sm text-royal-charcoal leading-relaxed font-normal">
+              Coiled micro-wire fabricated to capture ambient mandap candlelight. It reflects an antique, non-brassy shimmer and is hand-stitched section by section using micro-needles to prevent oxidative discoloration over generations.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-4 text-xs font-sans text-royal-charcoal">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-sparkles text-royal-goldDeep text-[11px]"></i> Non-tarnishing coating</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-feather text-royal-goldDeep text-[11px]"></i> Featherweight density</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-heart text-royal-goldDeep text-[11px]"></i> Heirloom preservation</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-royal-surface p-6 rounded-2xl border border-royal-goldAntique/40 shadow-royal-subtle space-y-4">
+            <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold block">Artisan Specs</span>
+            <div class="space-y-3 font-body text-xs">
+              <div>
+                <div class="flex justify-between text-royal-charcoal mb-1">
+                  <span>Luster Intensity</span>
+                  <span id="inspect-luster" class="font-semibold text-royal-deepWine">Warm Champagne Antique (92%)</span>
+                </div>
+                <div class="w-full h-1.5 bg-royal-card rounded-full overflow-hidden border border-royal-goldAntique/20">
+                  <div id="inspect-luster-bar" class="h-full bg-gradient-to-r from-royal-goldAntique to-royal-deepWine rounded-full" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-royal-charcoal mb-1">
+                  <span>Tension Resistance</span>
+                  <span id="inspect-tension" class="font-semibold text-royal-deepWine">High (Maggam Framed)</span>
+                </div>
+                <div class="w-full h-1.5 bg-royal-card rounded-full overflow-hidden border border-royal-goldAntique/20">
+                  <div id="inspect-tension-bar" class="h-full bg-gradient-to-r from-royal-goldAntique to-royal-deepWine rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="pt-2 border-t border-royal-goldAntique/25 text-[11px] text-royal-muted">
+                <span class="font-bold text-royal-deepWine block">Ideal Pairing:</span>
+                <span id="inspect-pairing">Kanchipuram Silk Saree Borders & Temple Necklines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="journey" class="py-16 sm:py-24 bg-ivory-200 relative border-b border-gold-subtle">
+  <section id="journey" class="py-20 sm:py-28 relative border-b border-royal-goldAntique/30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
-        <span class="font-sans text-xs uppercase tracking-wide-luxury text-gold-deep font-bold">The Atelier Process</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-maroon-950 font-semibold">The Bespoke Journey</h2>
-        <p class="font-body text-charcoal-600 text-xs sm:text-sm font-normal">
-          From the initial thread sketch to the finished hand-stitched bridal blouse.
+      
+      <div class="reveal-on-scroll text-center max-w-2xl mx-auto mb-14 sm:mb-16 space-y-3">
+        <span class="font-sans text-xs uppercase tracking-wide-luxury text-royal-goldDeep font-bold">The Atelier Process</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-royal-deepWine font-semibold">The Bespoke Journey</h2>
+        <p class="font-body text-royal-charcoal text-xs sm:text-sm font-normal">
+          Click any phase to preview how your bridal garment transitions from raw thread to bridal couture.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gold-burnished/30 shadow-atelier">
-          <div class="w-10 h-10 rounded-full bg-maroon-850 text-gold-pale font-serif font-bold text-base flex items-center justify-center mb-4 shadow-sm">
+        
+        <div onclick="selectJourneyStep(1)" id="journey-card-1" class="journey-step-card active cursor-pointer royal-glass-card floating-box rounded-3xl p-6 sm:p-7 border-2 border-royal-deepWine shadow-royal-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-royal-deepWine text-royal-goldPale font-serif font-bold text-lg flex items-center justify-center mb-5 shadow-royal-crest">
             01
           </div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Design Dialogue</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed font-normal">
-            Share your saree hues, muhurtham date, and motif wishes on WhatsApp or visit our Mannivakkam studio.
+          <h4 class="font-serif text-xl text-royal-deepWine font-semibold">Design Dialogue</h4>
+          <p class="font-body text-xs text-royal-charcoal mt-2.5 leading-relaxed font-normal">
+            Share your saree hues, muhurtham date, and motif dreams on WhatsApp or visit our Mannivakkam studio.
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gold-burnished/30 shadow-atelier">
-          <div class="w-10 h-10 rounded-full bg-maroon-850 text-gold-pale font-serif font-bold text-base flex items-center justify-center mb-4 shadow-sm">
+        <div onclick="selectJourneyStep(2)" id="journey-card-2" class="journey-step-card cursor-pointer royal-glass-card floating-box rounded-3xl p-6 sm:p-7 border-2 border-royal-goldAntique/40 shadow-royal-subtle transition-all duration-300 hover:border-royal-goldAntique">
+          <div class="w-12 h-12 rounded-2xl bg-royal-card border border-royal-goldAntique/50 text-royal-deepWine font-serif font-bold text-lg flex items-center justify-center mb-5 shadow-sm">
             02
           </div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Motif & Tracing</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed font-normal">
+          <h4 class="font-serif text-xl text-royal-deepWine font-semibold">Motif & Tracing</h4>
+          <p class="font-body text-xs text-royal-charcoal mt-2.5 leading-relaxed font-normal">
             We draft precise necklines, sleeve depths, and architectural paper tracings scaled to your measurements.
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gold-burnished/30 shadow-atelier">
-          <div class="w-10 h-10 rounded-full bg-maroon-850 text-gold-pale font-serif font-bold text-base flex items-center justify-center mb-4 shadow-sm">
+        <div onclick="selectJourneyStep(3)" id="journey-card-3" class="journey-step-card cursor-pointer royal-glass-card floating-box rounded-3xl p-6 sm:p-7 border-2 border-royal-goldAntique/40 shadow-royal-subtle transition-all duration-300 hover:border-royal-goldAntique">
+          <div class="w-12 h-12 rounded-2xl bg-royal-card border border-royal-goldAntique/50 text-royal-deepWine font-serif font-bold text-lg flex items-center justify-center mb-5 shadow-sm">
             03
           </div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Needle Execution</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed font-normal">
+          <h4 class="font-serif text-xl text-royal-deepWine font-semibold">Needle Execution</h4>
+          <p class="font-body text-xs text-royal-charcoal mt-2.5 leading-relaxed font-normal">
             Artisans stitch thread by thread using pure metallic zardozi, cutbead, and moti on taut timber frames.
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gold-burnished/30 shadow-atelier">
-          <div class="w-10 h-10 rounded-full bg-maroon-850 text-gold-pale font-serif font-bold text-base flex items-center justify-center mb-4 shadow-sm">
+        <div onclick="selectJourneyStep(4)" id="journey-card-4" class="journey-step-card cursor-pointer royal-glass-card floating-box rounded-3xl p-6 sm:p-7 border-2 border-royal-goldAntique/40 shadow-royal-subtle transition-all duration-300 hover:border-royal-goldAntique">
+          <div class="w-12 h-12 rounded-2xl bg-royal-card border border-royal-goldAntique/50 text-royal-deepWine font-serif font-bold text-lg flex items-center justify-center mb-5 shadow-sm">
             04
           </div>
-          <h4 class="font-serif text-xl text-maroon-950 font-semibold">Inspected Delivery</h4>
-          <p class="font-body text-xs text-charcoal-600 mt-2 leading-relaxed font-normal">
+          <h4 class="font-serif text-xl text-royal-deepWine font-semibold">Inspected Delivery</h4>
+          <p class="font-body text-xs text-royal-charcoal mt-2.5 leading-relaxed font-normal">
             Detailed finishing, tailoring if requested, and secure insured delivery right to your doorstep anywhere in the world.
           </p>
         </div>
+
       </div>
+
+      <div id="journey-detail-box" class="reveal-on-scroll mt-8 p-6 sm:p-8 rounded-3xl royal-glass-card border border-royal-goldAntique/40 shadow-royal-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-royal-surface border border-royal-goldAntique/60 text-royal-deepWine flex items-center justify-center text-lg shadow-royal-crest flex-shrink-0">
+            <i id="journey-detail-icon" class="fa-solid fa-comments"></i>
+          </div>
+          <div>
+            <h5 id="journey-detail-title" class="font-serif text-lg text-royal-deepWine font-semibold">Phase 01: Client Dialogue & Palette Matching</h5>
+            <p id="journey-detail-text" class="font-body text-xs text-royal-charcoal mt-0.5">We analyze your saree body and border swatches to harmonize matching dabka, resham silk, and beadwork.</p>
+          </div>
+        </div>
+        <button onclick="document.getElementById('briefing-studio').scrollIntoView({behavior: 'smooth'})" class="px-6 py-2.5 rounded-full bg-royal-deepWine text-royal-goldPale text-xs font-sans uppercase tracking-luxury font-semibold whitespace-nowrap hover:bg-royal-imperialWine transition-colors shadow-sm border border-royal-goldAntique/40">
+          Start Phase 01
+        </button>
+      </div>
+
     </div>
   </section>
 
-  <section id="briefing-studio" class="py-16 sm:py-24 bg-ivory-100 relative border-b border-gold-subtle">
+  <section id="briefing-studio" class="py-20 sm:py-28 relative border-b border-royal-goldAntique/30">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14 space-y-2">
-        <span class="font-sans text-xs uppercase tracking-wide-luxury text-gold-deep font-bold">Direct Atelier Commission Desk</span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-maroon-950 font-semibold">Bespoke Design Inquiry</h2>
-        <p class="font-body text-xs sm:text-sm text-charcoal-600 font-normal">
-          Structure your garment brief below. This form directly generates a formatted WhatsApp dossier sent to Lead Designer Kavya Shyamsundar at <strong class="text-maroon-850">+91 9110231866</strong>.
+      
+      <div class="reveal-on-scroll text-center max-w-2xl mx-auto mb-12 sm:mb-14 space-y-2">
+        <span class="font-sans text-xs uppercase tracking-wide-luxury text-royal-goldDeep font-bold">Direct Atelier Commission Desk</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-royal-deepWine font-semibold">Bespoke Design Inquiry</h2>
+        <p class="font-body text-xs sm:text-sm text-royal-charcoal font-normal">
+          Configure your bridal brief below. This dynamically formats a detailed briefing sent straight to Lead Designer Kavya Shyamsundar at <strong class="text-royal-deepWine">+91 9110231866</strong>.
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-atelier border border-gold-burnished/30 overflow-hidden">
-        <div class="grid grid-cols-3 bg-ivory-200 border-b border-gold-subtle">
-          <button id="step-btn-1" onclick="switchStep(1)" class="py-3.5 sm:py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-maroon-850 text-maroon-950 font-sans font-bold text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2">
-            <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-maroon-850 text-gold-pale text-[9px] sm:text-[10px] font-sans flex items-center justify-center font-bold">1</span>
-            <span class="truncate">Garment</span>
+      <div class="reveal-on-scroll royal-glass-card rounded-3xl shadow-royal-hover border border-royal-goldAntique/40 overflow-hidden">
+        
+        <div class="grid grid-cols-3 bg-royal-surface border-b border-royal-goldAntique/30">
+          <button id="step-btn-1" onclick="switchStep(1)" class="py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-royal-deepWine text-royal-deepWine font-sans font-bold text-[11px] sm:text-sm flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-royal-deepWine text-royal-goldPale text-[10px] font-sans flex items-center justify-center font-bold">1</span>
+            <span class="truncate">Garment Canvas</span>
           </button>
-          <button id="step-btn-2" onclick="switchStep(2)" class="py-3.5 sm:py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-transparent text-charcoal-500 font-sans font-medium text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2">
-            <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-ivory-300 text-charcoal-700 text-[9px] sm:text-[10px] font-sans flex items-center justify-center">2</span>
-            <span class="truncate">Craft & Motif</span>
+          <button id="step-btn-2" onclick="switchStep(2)" class="py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-transparent text-royal-muted font-sans font-medium text-[11px] sm:text-sm flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-royal-card text-royal-charcoal text-[10px] font-sans flex items-center justify-center">2</span>
+            <span class="truncate">Craft & Theme</span>
           </button>
-          <button id="step-btn-3" onclick="switchStep(3)" class="py-3.5 sm:py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-transparent text-charcoal-500 font-sans font-medium text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2">
-            <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-ivory-300 text-charcoal-700 text-[9px] sm:text-[10px] font-sans flex items-center justify-center">3</span>
-            <span class="truncate">Schedule</span>
+          <button id="step-btn-3" onclick="switchStep(3)" class="py-4 px-2 sm:px-4 text-center transition-all border-b-2 border-transparent text-royal-muted font-sans font-medium text-[11px] sm:text-sm flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-royal-card text-royal-charcoal text-[10px] font-sans flex items-center justify-center">3</span>
+            <span class="truncate">Event Schedule</span>
           </button>
         </div>
 
-        <div class="p-5 sm:p-10">
+        <div class="p-6 sm:p-10">
+          
           <div id="step-panel-1" class="space-y-6">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl text-maroon-950 font-semibold">Step 1: Choose Garment Canvas</h3>
-              <p class="font-body text-xs sm:text-sm text-charcoal-600 mt-1">Select the silhouette you wish to custom embellish.</p>
+              <h3 class="font-serif text-xl sm:text-2xl text-royal-deepWine font-semibold">Step 1: Choose Garment Canvas</h3>
+              <p class="font-body text-xs sm:text-sm text-royal-charcoal mt-1">Select the silhouette you wish to custom embellish.</p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 pt-2">
-              <div onclick="selectGarmentType('Bridal Blouse')" class="canvas-card cursor-pointer p-4 sm:p-5 rounded-xl border-2 border-maroon-850 bg-gold-surface transition-all text-center flex flex-col items-center shadow-sm">
-                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-gold-burnished/40 text-maroon-850 flex items-center justify-center text-lg sm:text-xl mb-2 sm:mb-3 shadow-crest">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+              <div onclick="selectGarmentType('Bridal Blouse')" class="canvas-card active cursor-pointer p-5 rounded-2xl border-2 border-royal-deepWine bg-royal-card shadow-royal-subtle transition-all text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-royal-surface border border-royal-goldAntique/50 text-royal-deepWine flex items-center justify-center text-xl mb-3 shadow-royal-crest">
                   <i class="fa-solid fa-vest-patches"></i>
                 </div>
-                <h4 class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Bridal Blouse</h4>
-                <p class="font-body text-[10px] sm:text-[11px] text-charcoal-600 mt-1">Back-neck, front neck & elbow sleeve borders</p>
+                <h4 class="font-serif text-lg text-royal-deepWine font-semibold">Bridal Blouse</h4>
+                <p class="font-body text-[11px] text-royal-charcoal mt-1">Back-neck, front neck & elbow sleeve borders</p>
               </div>
 
-              <div onclick="selectGarmentType('Saree Embellishment')" class="canvas-card cursor-pointer p-4 sm:p-5 rounded-xl border-2 border-gold-subtle bg-white transition-all hover:border-gold-antique text-center flex flex-col items-center">
-                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ivory-100 border border-gold-burnished/30 text-gold-deep flex items-center justify-center text-lg sm:text-xl mb-2 sm:mb-3">
+              <div onclick="selectGarmentType('Saree Embellishment')" class="canvas-card cursor-pointer p-5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 transition-all hover:border-royal-goldAntique hover:bg-royal-card text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-royal-card border border-royal-goldAntique/40 text-royal-goldDeep flex items-center justify-center text-xl mb-3">
                   <i class="fa-solid fa-scroll"></i>
                 </div>
-                <h4 class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Saree Border / Pallu</h4>
-                <p class="font-body text-[10px] sm:text-[11px] text-charcoal-600 mt-1">Cutwork borders, scalloped hem & grand pallu motifs</p>
+                <h4 class="font-serif text-lg text-royal-deepWine font-semibold">Saree Border / Pallu</h4>
+                <p class="font-body text-[11px] text-royal-charcoal mt-1">Cutwork borders, scalloped hem & grand pallu motifs</p>
               </div>
 
-              <div onclick="selectGarmentType('Occasion Wear')" class="canvas-card cursor-pointer p-4 sm:p-5 rounded-xl border-2 border-gold-subtle bg-white transition-all hover:border-gold-antique text-center flex flex-col items-center">
-                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ivory-100 border border-gold-burnished/30 text-gold-deep flex items-center justify-center text-lg sm:text-xl mb-2 sm:mb-3">
+              <div onclick="selectGarmentType('Occasion Wear')" class="canvas-card cursor-pointer p-5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 transition-all hover:border-royal-goldAntique hover:bg-royal-card text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-royal-card border border-royal-goldAntique/40 text-royal-goldDeep flex items-center justify-center text-xl mb-3">
                   <i class="fa-solid fa-person-dress"></i>
                 </div>
-                <h4 class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Occasion Kurti / Lehanga</h4>
-                <p class="font-body text-[10px] sm:text-[11px] text-charcoal-600 mt-1">Yoke necklines, waistband detailing & motif patches</p>
+                <h4 class="font-serif text-lg text-royal-deepWine font-semibold">Occasion Kurti / Lehanga</h4>
+                <p class="font-body text-[11px] text-royal-charcoal mt-1">Yoke necklines, waistband detailing & motif patches</p>
               </div>
 
-              <div onclick="selectGarmentType('Personalized Keepsake')" class="canvas-card cursor-pointer p-4 sm:p-5 rounded-xl border-2 border-gold-subtle bg-white transition-all hover:border-gold-antique text-center flex flex-col items-center">
-                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ivory-100 border border-gold-burnished/30 text-gold-deep flex items-center justify-center text-lg sm:text-xl mb-2 sm:mb-3">
+              <div onclick="selectGarmentType('Personalized Keepsake')" class="canvas-card cursor-pointer p-5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 transition-all hover:border-royal-goldAntique hover:bg-royal-card text-center flex flex-col items-center">
+                <div class="w-12 h-12 rounded-full bg-royal-card border border-royal-goldAntique/40 text-royal-goldDeep flex items-center justify-center text-xl mb-3">
                   <i class="fa-solid fa-gift"></i>
                 </div>
-                <h4 class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Keepsake / Monogram</h4>
-                <p class="font-body text-[10px] sm:text-[11px] text-charcoal-600 mt-1">Personalized wedding initials frame or couple patch</p>
+                <h4 class="font-serif text-lg text-royal-deepWine font-semibold">Keepsake / Monogram</h4>
+                <p class="font-body text-[11px] text-royal-charcoal mt-1">Personalized wedding initials frame or couple patch</p>
               </div>
             </div>
 
             <div class="flex justify-end pt-3">
-              <button onclick="switchStep(2)" class="w-full sm:w-auto px-7 py-3 rounded-full bg-maroon-850 text-gold-pale font-sans text-xs uppercase tracking-luxury font-bold hover:bg-maroon-800 transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <button onclick="switchStep(2)" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-royal-deepWine text-royal-goldPale font-sans text-xs uppercase tracking-luxury font-bold hover:bg-royal-imperialWine transition-colors flex items-center justify-center gap-2 shadow-royal-subtle hover:shadow-royal-hover border border-royal-goldAntique/40">
                 <span>Continue to Craft Medium</span>
                 <i class="fa-solid fa-arrow-right text-[11px]"></i>
               </button>
@@ -594,57 +741,57 @@
 
           <div id="step-panel-2" class="hidden space-y-6">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl text-maroon-950 font-semibold">Step 2: Embroidery Medium & Motif</h3>
-              <p class="font-body text-xs sm:text-sm text-charcoal-600 mt-1">Specify your desired needlework technique and design language.</p>
+              <h3 class="font-serif text-xl sm:text-2xl text-royal-deepWine font-semibold">Step 2: Embroidery Medium & Motif</h3>
+              <p class="font-body text-xs sm:text-sm text-royal-charcoal mt-1">Specify your desired needlework technique and design direction.</p>
             </div>
 
             <div>
-              <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-2 font-bold">Needlework Technique</label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <button type="button" onclick="selectMedium('Handcrafted Aari Work')" class="medium-card p-4 rounded-xl border-2 border-maroon-850 bg-gold-surface text-left transition-all shadow-sm">
-                  <div class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Handcrafted Aari Work</div>
-                  <div class="font-body text-[11px] text-charcoal-600 mt-1">Maggam wooden frame hook work, zardozi coils, cutdana & moti</div>
+              <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-2 font-bold">Needlework Technique</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                <button type="button" onclick="selectMedium('Handcrafted Aari Work')" class="medium-card active p-4 rounded-2xl border-2 border-royal-deepWine bg-royal-card text-left transition-all shadow-royal-subtle">
+                  <div class="font-serif text-base sm:text-lg text-royal-deepWine font-semibold">Handcrafted Aari Work</div>
+                  <div class="font-body text-[11px] text-royal-charcoal mt-1">Maggam wooden frame hook work, zardozi coils, cutdana & moti</div>
                 </button>
 
-                <button type="button" onclick="selectMedium('Machine Embroidery')" class="medium-card p-4 rounded-xl border-2 border-gold-subtle bg-white text-left transition-all hover:border-gold-antique">
-                  <div class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Machine Embroidery</div>
-                  <div class="font-body text-[11px] text-charcoal-600 mt-1">High-density multi-thread computerized stitch work with symmetry</div>
+                <button type="button" onclick="selectMedium('Machine Embroidery')" class="medium-card p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 text-left transition-all hover:border-royal-goldAntique hover:bg-royal-card">
+                  <div class="font-serif text-base sm:text-lg text-royal-deepWine font-semibold">Machine Embroidery</div>
+                  <div class="font-body text-[11px] text-royal-charcoal mt-1">High-density multi-thread computerized stitch work with symmetry</div>
                 </button>
 
-                <button type="button" onclick="selectMedium('Bespoke Fusion')" class="medium-card p-4 rounded-xl border-2 border-gold-subtle bg-white text-left transition-all hover:border-gold-antique">
-                  <div class="font-serif text-base sm:text-lg text-maroon-950 font-semibold">Bespoke Fusion</div>
-                  <div class="font-body text-[11px] text-charcoal-600 mt-1">Machine base with rich artisan hand-stonework and zardozi relief</div>
+                <button type="button" onclick="selectMedium('Bespoke Fusion')" class="medium-card p-4 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 text-left transition-all hover:border-royal-goldAntique hover:bg-royal-card">
+                  <div class="font-serif text-base sm:text-lg text-royal-deepWine font-semibold">Bespoke Fusion</div>
+                  <div class="font-body text-[11px] text-royal-charcoal mt-1">Machine base with rich artisan hand-stonework and zardozi relief</div>
                 </button>
               </div>
             </div>
 
             <div>
-              <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-2 font-bold">Design Direction</label>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
-                <button type="button" onclick="selectMotifDirection('Traditional Peacock & Birds')" class="motif-card p-3 rounded-lg border-2 border-maroon-850 bg-gold-surface text-center transition-all shadow-sm">
-                  <i class="fa-solid fa-dove text-maroon-850 text-lg mb-1 block"></i>
-                  <span class="font-sans text-xs text-maroon-950 block font-semibold">Peacock & Birds</span>
+              <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-2 font-bold">Design Direction</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <button type="button" onclick="selectMotifDirection('Traditional Peacock & Birds')" class="motif-card active p-3.5 rounded-2xl border-2 border-royal-deepWine bg-royal-card text-center transition-all shadow-royal-subtle">
+                  <i class="fa-solid fa-dove text-royal-deepWine text-xl mb-1.5 block"></i>
+                  <span class="font-sans text-xs text-royal-deepWine block font-semibold">Peacock & Birds</span>
                 </button>
-                <button type="button" onclick="selectMotifDirection('Temple & Sacred Gopuram')" class="motif-card p-3 rounded-lg border-2 border-gold-subtle bg-white text-center transition-all hover:border-gold-antique">
-                  <i class="fa-solid fa-gopuram text-gold-deep text-lg mb-1 block"></i>
-                  <span class="font-sans text-xs text-maroon-950 block font-semibold">Temple & Gopuram</span>
+                <button type="button" onclick="selectMotifDirection('Temple & Sacred Gopuram')" class="motif-card p-3.5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card">
+                  <i class="fa-solid fa-gopuram text-royal-goldDeep text-xl mb-1.5 block"></i>
+                  <span class="font-sans text-xs text-royal-deepWine block font-semibold">Temple & Gopuram</span>
                 </button>
-                <button type="button" onclick="selectMotifDirection('Lotus & Floral Vines')" class="motif-card p-3 rounded-lg border-2 border-gold-subtle bg-white text-center transition-all hover:border-gold-antique">
-                  <i class="fa-solid fa-spa text-gold-deep text-lg mb-1 block"></i>
-                  <span class="font-sans text-xs text-maroon-950 block font-semibold">Lotus & Floral Vines</span>
+                <button type="button" onclick="selectMotifDirection('Lotus & Floral Vines')" class="motif-card p-3.5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card">
+                  <i class="fa-solid fa-spa text-royal-goldDeep text-xl mb-1.5 block"></i>
+                  <span class="font-sans text-xs text-royal-deepWine block font-semibold">Lotus & Floral Vines</span>
                 </button>
-                <button type="button" onclick="selectMotifDirection('Contemporary Minimal Geometric')" class="motif-card p-3 rounded-lg border-2 border-gold-subtle bg-white text-center transition-all hover:border-gold-antique">
-                  <i class="fa-solid fa-shapes text-gold-deep text-lg mb-1 block"></i>
-                  <span class="font-sans text-xs text-maroon-950 block font-semibold">Minimal Geometric</span>
+                <button type="button" onclick="selectMotifDirection('Contemporary Minimal Geometric')" class="motif-card p-3.5 rounded-2xl border-2 border-royal-goldAntique/40 bg-royal-surface/80 text-center transition-all hover:border-royal-goldAntique hover:bg-royal-card">
+                  <i class="fa-solid fa-shapes text-royal-goldDeep text-xl mb-1.5 block"></i>
+                  <span class="font-sans text-xs text-royal-deepWine block font-semibold">Minimal Geometric</span>
                 </button>
               </div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-2 justify-between pt-3">
-              <button onclick="switchStep(1)" class="w-full sm:w-auto px-6 py-2.5 rounded-full border border-gold-burnished/40 text-charcoal-700 font-sans text-xs uppercase tracking-luxury hover:bg-ivory-200 transition-colors">
+              <button onclick="switchStep(1)" class="w-full sm:w-auto px-6 py-2.5 rounded-full border border-royal-goldAntique/50 text-royal-charcoal font-sans text-xs uppercase tracking-luxury hover:bg-royal-card transition-colors">
                 <i class="fa-solid fa-arrow-left mr-1"></i> Back
               </button>
-              <button onclick="switchStep(3)" class="w-full sm:w-auto px-7 py-3 rounded-full bg-maroon-850 text-gold-pale font-sans text-xs uppercase tracking-luxury font-bold hover:bg-maroon-800 transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <button onclick="switchStep(3)" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-royal-deepWine text-royal-goldPale font-sans text-xs uppercase tracking-luxury font-bold hover:bg-royal-imperialWine transition-colors flex items-center justify-center gap-2 shadow-royal-subtle hover:shadow-royal-hover border border-royal-goldAntique/40">
                 <span>Continue to Occasion Schedule</span>
                 <i class="fa-solid fa-arrow-right text-[11px]"></i>
               </button>
@@ -653,34 +800,34 @@
 
           <div id="step-panel-3" class="hidden space-y-6">
             <div>
-              <h3 class="font-serif text-xl sm:text-2xl text-maroon-950 font-semibold">Step 3: Occasion Schedule & Delivery</h3>
-              <p class="font-body text-xs sm:text-sm text-charcoal-600 mt-1">Finalize your brief to generate the direct WhatsApp transmission.</p>
+              <h3 class="font-serif text-xl sm:text-2xl text-royal-deepWine font-semibold">Step 3: Occasion Schedule & Delivery</h3>
+              <p class="font-body text-xs sm:text-sm text-royal-charcoal mt-1">Finalize your brief to generate the direct WhatsApp dossier.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Client Full Name *</label>
-                <input type="text" id="brief-name" required placeholder="e.g. Radhika Sundaram" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Client Full Name *</label>
+                <input type="text" id="brief-name" required placeholder="e.g. Radhika Sundaram" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
               </div>
 
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Phone / WhatsApp Number *</label>
-                <input type="tel" id="brief-phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Phone / WhatsApp Number *</label>
+                <input type="tel" id="brief-phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
               </div>
 
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Delivery City & Country</label>
-                <input type="text" id="brief-city" placeholder="e.g. Chennai / Bangalore / London / Dallas" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Delivery City & Country</label>
+                <input type="text" id="brief-city" placeholder="e.g. Chennai / Bangalore / London / Dallas" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
               </div>
 
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Target Muhurtham / Event Date</label>
-                <input type="date" id="brief-date" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Target Muhurtham / Event Date</label>
+                <input type="date" id="brief-date" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
               </div>
 
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Fabric Sourcing</label>
-                <select id="brief-fabric" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Fabric Sourcing</label>
+                <select id="brief-fabric" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
                   <option value="I will courier / bring my own saree blouse bit">I will courier / bring my own saree blouse bit</option>
                   <option value="AT Creations Pure Raw Silk (Deep Wine / Maroon)">AT Creations Pure Raw Silk (Deep Wine / Maroon)</option>
                   <option value="AT Creations Pure Raw Silk (Antique Mustard Gold)">AT Creations Pure Raw Silk (Antique Mustard Gold)</option>
@@ -691,8 +838,8 @@
               </div>
 
               <div>
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Consultation Format</label>
-                <select id="brief-mode" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white">
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Consultation Format</label>
+                <select id="brief-mode" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm">
                   <option value="WhatsApp Video Call / Chat">WhatsApp Video Call / Chat</option>
                   <option value="Physical Visit to Mannivakkam Studio">Physical Visit to Mannivakkam Studio</option>
                   <option value="Direct Phone Call">Direct Phone Call</option>
@@ -700,127 +847,141 @@
               </div>
 
               <div class="md:col-span-2">
-                <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1.5 font-bold">Neckline & Reference Notes</label>
-                <textarea id="brief-notes" rows="2" placeholder="Tell us about your neckline preference (e.g. pot neck, square neck, deep U), sleeve length, or reference ideas you'd like to share..." class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl p-3 text-xs text-charcoal-800 font-body focus:outline-none focus:border-maroon-850 focus:bg-white"></textarea>
+                <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1.5 font-bold">Neckline & Reference Notes</label>
+                <textarea id="brief-notes" rows="2" placeholder="Tell us about your neckline preference (e.g. pot neck, square neck, deep U), sleeve length, or reference ideas you'd like to share..." class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl p-3 text-xs text-royal-espresso font-body focus:outline-none focus:border-royal-deepWine focus:bg-white transition-all shadow-sm"></textarea>
               </div>
             </div>
 
-            <div class="bg-gold-surface border border-gold-burnished/40 rounded-2xl p-5 sm:p-6 mt-6 shadow-sm">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="royal-glass-card border border-royal-goldAntique/50 rounded-2xl p-6 sm:p-7 mt-6 shadow-royal-subtle">
+              <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
                 <div>
-                  <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-gold-deep font-bold">Live Commission Brief:</span>
-                  <h4 id="brief-summary-text" class="font-serif text-lg sm:text-2xl text-maroon-950 mt-1 font-semibold leading-snug">
+                  <span class="font-sans text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold">Live Brief Summary:</span>
+                  <h4 id="brief-summary-text" class="font-serif text-lg sm:text-2xl text-royal-deepWine mt-1 font-semibold leading-snug">
                     Bridal Blouse &bull; Handcrafted Aari Work &bull; Traditional Peacock & Birds
                   </h4>
-                  <p class="font-body text-xs text-charcoal-600 mt-1">
+                  <p class="font-body text-xs text-royal-charcoal mt-1">
                     No payment requested. This formats your details into an inquiry directly sent to Kavya Shyamsundar.
                   </p>
                 </div>
 
-                <button onclick="dispatchCommissionToWhatsApp()" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-sans text-xs uppercase tracking-luxury font-bold shadow-md flex items-center justify-center gap-2.5 transition-all transform hover:scale-[1.02] whitespace-nowrap">
-                  <i class="fa-brands fa-whatsapp text-lg"></i>
-                  <span>Submit via WhatsApp</span>
-                </button>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button onclick="dispatchCommissionToWhatsApp()" class="px-7 py-3.5 sm:py-4 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-sans text-xs uppercase tracking-luxury font-bold shadow-royal-subtle hover:shadow-royal-hover flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Submit via WhatsApp</span>
+                  </button>
+                  <button onclick="dispatchCommissionToEmail()" class="px-6 py-3.5 sm:py-4 rounded-full border border-royal-deepWine text-royal-deepWine hover:bg-royal-deepWine hover:text-royal-goldPale font-sans text-xs uppercase tracking-luxury font-bold transition-all whitespace-nowrap bg-royal-surface/80">
+                    <i class="fa-regular fa-envelope mr-1.5"></i>
+                    <span>Email Brief</span>
+                  </button>
+                </div>
               </div>
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-2">
-              <button onclick="switchStep(2)" class="w-full sm:w-auto px-6 py-2.5 rounded-full border border-gold-burnished/40 text-charcoal-700 font-sans text-xs uppercase tracking-luxury hover:bg-ivory-200 transition-colors">
+              <button onclick="switchStep(2)" class="w-full sm:w-auto px-6 py-2.5 rounded-full border border-royal-goldAntique/50 text-royal-charcoal font-sans text-xs uppercase tracking-luxury hover:bg-royal-card transition-colors">
                 <i class="fa-solid fa-arrow-left mr-1"></i> Back
               </button>
-              <span class="font-sans text-[11px] text-charcoal-600 flex items-center tracking-luxury font-medium">
-                <i class="fa-solid fa-shield-halved text-gold-deep mr-1.5"></i> Direct Atelier Line: +91 9110231866
+              <span class="font-sans text-[11px] text-royal-charcoal flex items-center tracking-luxury font-medium">
+                <i class="fa-solid fa-shield-halved text-royal-goldDeep mr-1.5"></i> Direct Atelier Line: +91 9110231866
               </span>
             </div>
           </div>
+
         </div>
       </div>
+
     </div>
   </section>
 
-  <section id="founder" class="py-16 sm:py-24 bg-ivory-200 text-charcoal-800 relative overflow-hidden border-b border-gold-subtle">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6 sm:space-y-7">
-      <div class="inline-flex flex-col items-center justify-center">
-        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-gold-burnished/60 p-1 flex items-center justify-center bg-white shadow-crest">
-          <div class="w-full h-full rounded-full border border-gold-burnished/40 bg-gold-surface flex flex-col items-center justify-center text-maroon-850">
-            <span class="font-serif italic font-bold text-xl sm:text-2xl tracking-normal">AT</span>
+  <section id="founder" class="py-20 sm:py-28 relative overflow-hidden border-b border-royal-goldAntique/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-7">
+      
+      <div class="reveal-on-scroll inline-flex flex-col items-center justify-center">
+        <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-royal-goldAntique p-1.5 flex items-center justify-center bg-royal-card shadow-royal-crest">
+          <div class="w-full h-full rounded-full border border-royal-goldAntique/50 bg-royal-surface flex flex-col items-center justify-center text-royal-deepWine">
+            <span class="font-serif italic font-bold text-2xl sm:text-3xl tracking-normal">AT</span>
+          </div>
+          <div class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-royal-deepWine text-royal-goldPale text-[8px] font-sans uppercase font-bold tracking-luxury shadow-sm">
+            Atelier
           </div>
         </div>
-        <span class="font-sans text-[9px] sm:text-[10px] uppercase tracking-wide-luxury text-gold-deep font-bold mt-2.5 sm:mt-3">Atelier Kavya Shyamsundar</span>
+        <span class="font-sans text-[9px] sm:text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep font-bold mt-4">Kavya Shyamsundar &bull; Founder's Monograph</span>
       </div>
 
-      <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl text-maroon-950 max-w-2xl mx-auto leading-snug font-semibold">
+      <h2 class="reveal-on-scroll font-serif text-2xl sm:text-4xl lg:text-5xl text-royal-deepWine max-w-2xl mx-auto leading-snug font-semibold">
         "Every stitch is an intimate prayer of devotion to Indian needlecraft."
       </h2>
 
-      <div class="max-w-2xl mx-auto space-y-4 font-body text-xs sm:text-sm text-charcoal-600 leading-relaxed font-normal text-left sm:text-center">
+      <div class="reveal-on-scroll max-w-2xl mx-auto space-y-4 font-body text-xs sm:text-sm text-royal-charcoal leading-relaxed font-normal text-left sm:text-center royal-glass-card p-6 sm:p-8 rounded-3xl border border-royal-goldAntique/40 shadow-royal-subtle">
         <p>
-          I founded <strong class="text-maroon-900 font-semibold">AT Creations</strong> with an unwavering reverence for the time-honored Maggam frames of Tamil Nadu and the storied needlework traditions of Indian wedding trousseaus. In an era of mass-produced uniformity, we believe that bridal wear should be as unique and personal as the vows you speak.
+          I founded <strong class="text-royal-deepWine font-semibold">AT Creations</strong> with an unwavering reverence for the time-honored Maggam frames of Tamil Nadu and the storied needlework traditions of Indian wedding trousseaus. In an era of mass-produced uniformity, we believe that bridal wear should be as unique and personal as the vows you speak.
         </p>
         <p>
           Our boutique studio at Ruby Royal Tower, Mannivakkam was created to offer brides a genuine creative sanctuary. Whether you bring an ancestral Kanjivaram saree passed down through generations or wish to design a fresh occasion silhouette, each needle pull, micro-pearl, and zardozi spiral is placed with heartfelt intention.
         </p>
       </div>
 
-      <div class="pt-5 sm:pt-6 border-t border-gold-subtle flex flex-col items-center justify-center">
-        <span class="font-serif italic text-2xl sm:text-3xl text-maroon-900 font-semibold tracking-wide">Kavya Shyamsundar</span>
-        <span class="font-sans text-[9px] sm:text-[10px] uppercase tracking-wide-luxury text-gold-deep mt-1 font-bold">Founder & Creative Director &bull; AT Creations</span>
+      <div class="reveal-on-scroll pt-4 flex flex-col items-center justify-center">
+        <span class="font-serif italic text-2xl sm:text-3xl text-royal-deepWine font-semibold tracking-wide">Kavya Shyamsundar</span>
+        <span class="font-sans text-[9px] sm:text-[10px] uppercase tracking-wide-luxury text-royal-goldDeep mt-1 font-bold">Founder & Creative Director &bull; AT Creations</span>
       </div>
+
     </div>
   </section>
 
-  <footer id="contact" class="bg-ivory-100 border-t border-gold-subtle text-charcoal-800 pt-14 sm:pt-20 pb-12">
+  <footer id="contact" class="border-t border-royal-goldAntique/30 pt-16 sm:pt-24 pb-12 bg-royal-surface/90">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-12 sm:pb-14 border-b border-gold-subtle">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-14 sm:pb-16 border-b border-royal-goldAntique/30">
         
-        <div class="lg:col-span-4 space-y-3.5 sm:space-y-4">
+        <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full border border-gold-burnished flex items-center justify-center bg-gold-surface text-maroon-850 font-serif italic text-sm font-bold shadow-crest">
+            <div class="w-9 h-9 rounded-full border border-royal-goldAntique flex items-center justify-center bg-royal-card text-royal-deepWine font-serif italic text-base font-bold shadow-royal-crest">
               AT
             </div>
-            <span class="font-serif text-2xl tracking-subtle text-maroon-950 uppercase font-semibold">AT Creations</span>
+            <span class="font-serif text-2xl tracking-subtle text-royal-deepWine uppercase font-semibold">AT Creations</span>
           </div>
-          <p class="font-body text-xs text-charcoal-600 leading-relaxed font-normal">
+          <p class="font-body text-xs text-royal-charcoal leading-relaxed font-normal">
             An exclusive boutique embroidery atelier crafting handcrafted Aari zardozi, precision multi-thread machine stitchery, and bespoke wedding heirlooms.
           </p>
-          <p class="font-serif italic text-sm text-gold-deep font-semibold">
+          <p class="font-serif italic text-sm text-royal-goldDeep font-semibold">
             "Threaded with creativity, worn with pride"
           </p>
         </div>
 
-        <div class="lg:col-span-4 space-y-3">
-          <h4 class="font-serif text-lg sm:text-xl text-maroon-950 font-semibold">Studio & Atelier</h4>
-          <ul class="space-y-3 font-body text-xs text-charcoal-700 font-normal">
+        <div class="lg:col-span-4 space-y-3.5">
+          <h4 class="font-serif text-lg sm:text-xl text-royal-deepWine font-semibold">Studio & Atelier</h4>
+          <ul class="space-y-3 font-body text-xs text-royal-charcoal font-normal">
             <li class="flex items-start space-x-3">
-              <i class="fa-solid fa-location-dot text-gold-deep mt-1"></i>
+              <i class="fa-solid fa-location-dot text-royal-goldDeep mt-1"></i>
               <span>Ruby Royal Tower,<br>Mannivakkam, Chennai, Tamil Nadu, India</span>
             </li>
             <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-phone text-gold-deep"></i>
-              <a href="tel:+919110231866" class="hover:text-maroon-850 transition-colors font-medium">+91 9110231866</a>
+              <i class="fa-solid fa-phone text-royal-goldDeep"></i>
+              <a href="tel:+919110231866" class="hover:text-royal-deepWine transition-colors font-medium">+91 9110231866</a>
             </li>
             <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-envelope text-gold-deep"></i>
-              <a href="mailto:ATcreations@gmail.com" class="hover:text-maroon-850 transition-colors font-medium">ATcreations@gmail.com</a>
+              <i class="fa-solid fa-envelope text-royal-goldDeep"></i>
+              <a href="mailto:ATcreations@gmail.com" class="hover:text-royal-deepWine transition-colors font-medium">ATcreations@gmail.com</a>
             </li>
             <li class="flex items-center space-x-3">
-              <i class="fa-regular fa-clock text-gold-deep"></i>
+              <i class="fa-regular fa-clock text-royal-goldDeep"></i>
               <span>Mon - Sat: 10:00 AM - 8:00 PM IST (By Appointment)</span>
             </li>
           </ul>
         </div>
 
-        <div class="lg:col-span-4 space-y-3 sm:space-y-4">
-          <h4 class="font-serif text-lg sm:text-xl text-maroon-950 font-semibold">Atelier Concierge</h4>
-          <p class="font-body text-xs text-charcoal-600 leading-relaxed font-normal">
+        <div class="lg:col-span-4 space-y-4">
+          <h4 class="font-serif text-lg sm:text-xl text-royal-deepWine font-semibold">Atelier Concierge</h4>
+          <p class="font-body text-xs text-royal-charcoal leading-relaxed font-normal">
             Planning your bridal blouse or trousseau? Connect directly with Kavya on WhatsApp for personalized neckline consultations and fabric matching.
           </p>
           <div class="flex flex-col sm:flex-row gap-3 pt-1">
-            <a href="https://wa.me/919110231866?text=Hello%20Kavya%20%26%20AT%20Creations%20team%2C%20I%20would%20like%20to%20schedule%20a%20bridal%20embroidery%20consultation." target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-sans font-semibold text-xs uppercase tracking-luxury text-center flex items-center justify-center gap-2 shadow">
+            <a href="https://wa.me/919110231866?text=Hello%20Kavya%20%26%20AT%20Creations%20team%2C%20I%20would%20like%20to%20schedule%20a%20bridal%20embroidery%20consultation." target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-sans font-semibold text-xs uppercase tracking-luxury text-center flex items-center justify-center gap-2 shadow-royal-subtle hover:shadow-royal-hover">
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span>WhatsApp Us</span>
             </a>
-            <button onclick="openConsultationModal()" class="px-6 py-3 rounded-full border border-maroon-850 text-maroon-900 hover:bg-maroon-850 hover:text-white font-sans font-semibold text-xs uppercase tracking-luxury transition-colors">
+            <button onclick="openConsultationModal()" class="px-6 py-3 rounded-full border border-royal-deepWine text-royal-deepWine bg-royal-card hover:bg-royal-deepWine hover:text-royal-goldPale font-sans font-semibold text-xs uppercase tracking-luxury transition-colors">
               Book Appointment
             </button>
           </div>
@@ -828,43 +989,44 @@
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs font-sans text-charcoal-500 gap-3 sm:gap-4 tracking-luxury text-center sm:text-left">
-        <p>Copyright &copy; 2026 AT Creations. Crafted with passion by <a href="https://thevasanth.com" target="_blank" rel="noopener noreferrer" class="text-maroon-850 hover:text-maroon-700 underline underline-offset-4 transition-colors font-semibold">Vas</a></p>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs font-sans text-royal-charcoal gap-3 sm:gap-4 tracking-luxury text-center sm:text-left">
+        <p>Copyright &copy; 2026 AT Creations. Crafted with passion by <a href="https://thevasanth.com" target="_blank" rel="noopener noreferrer" class="text-royal-deepWine hover:text-royal-imperialWine underline underline-offset-4 transition-colors font-semibold">Vas</a></p>
         <p class="flex items-center gap-2">
           <span>Ruby Royal Tower, Mannivakkam</span>
-          <span class="text-gold-deep">&bull;</span>
+          <span class="text-royal-goldDeep">&bull;</span>
           <span>Chennai, India</span>
         </p>
       </div>
+
     </div>
   </footer>
 
-  <div id="consultation-modal" class="fixed inset-0 z-[1000] bg-charcoal-900/60 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-9 border border-gold-burnished/40 shadow-2xl relative">
-      <button onclick="closeConsultationModal()" class="absolute top-5 right-5 text-charcoal-400 hover:text-maroon-850 transition-colors w-8 h-8 rounded-full bg-ivory-100 flex items-center justify-center">
+  <div id="consultation-modal" class="fixed inset-0 z-[1000] bg-royal-espresso/60 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-royal-surface rounded-3xl max-w-lg w-full p-6 sm:p-9 border border-royal-goldAntique/50 shadow-royal-hover relative">
+      <button onclick="closeConsultationModal()" class="absolute top-5 right-5 text-royal-muted hover:text-royal-deepWine transition-colors w-8 h-8 rounded-full bg-royal-card flex items-center justify-center shadow-sm">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <div class="text-center mb-6">
-        <span class="font-sans text-xs uppercase tracking-wide-luxury text-gold-deep font-bold">Studio Appointment</span>
-        <h3 class="font-serif text-2xl sm:text-3xl text-maroon-950 mt-1 font-semibold">Book Design Dialogue</h3>
-        <p class="font-body text-xs text-charcoal-600 mt-1">Direct session with Lead Designer Kavya Shyamsundar.</p>
+        <span class="font-sans text-xs uppercase tracking-wide-luxury text-royal-goldDeep font-bold">Studio Appointment</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-royal-deepWine mt-1 font-semibold">Book Design Dialogue</h3>
+        <p class="font-body text-xs text-royal-charcoal mt-1">Direct session with Lead Designer Kavya Shyamsundar.</p>
       </div>
 
       <form onsubmit="handleConsultationSubmit(event)" class="space-y-4 font-body">
         <div>
-          <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1 font-bold">Your Name</label>
-          <input type="text" id="consult-name" required placeholder="Full Name" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-2.5 text-xs text-charcoal-800 focus:outline-none focus:border-maroon-850 focus:bg-white">
+          <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1 font-bold">Your Name</label>
+          <input type="text" id="consult-name" required placeholder="Full Name" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-2.5 text-xs text-royal-espresso focus:outline-none focus:border-royal-deepWine shadow-sm">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1 font-bold">Phone / WhatsApp</label>
-            <input type="tel" id="consult-phone" required placeholder="+91..." class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-2.5 text-xs text-charcoal-800 focus:outline-none focus:border-maroon-850 focus:bg-white">
+            <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1 font-bold">Phone / WhatsApp</label>
+            <input type="tel" id="consult-phone" required placeholder="+91..." class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-2.5 text-xs text-royal-espresso focus:outline-none focus:border-royal-deepWine shadow-sm">
           </div>
           <div>
-            <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1 font-bold">Preferred Mode</label>
-            <select id="consult-mode" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-3 py-2.5 text-xs text-charcoal-800 focus:outline-none focus:border-maroon-850 focus:bg-white">
+            <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1 font-bold">Preferred Mode</label>
+            <select id="consult-mode" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-3 py-2.5 text-xs text-royal-espresso focus:outline-none focus:border-royal-deepWine shadow-sm">
               <option value="WhatsApp Video Call">WhatsApp Video</option>
               <option value="Studio Visit (Mannivakkam)">Studio Visit</option>
               <option value="Phone Call Discussion">Phone Call</option>
@@ -873,16 +1035,16 @@
         </div>
 
         <div>
-          <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1 font-bold">Occasion / Garment Type</label>
-          <input type="text" id="consult-focus" placeholder="e.g. Muhurtham Bridal Blouse, Sangeet Kurti..." class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-2.5 text-xs text-charcoal-800 focus:outline-none focus:border-maroon-850 focus:bg-white">
+          <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1 font-bold">Occasion / Garment Type</label>
+          <input type="text" id="consult-focus" placeholder="e.g. Muhurtham Bridal Blouse, Sangeet Kurti..." class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-2.5 text-xs text-royal-espresso focus:outline-none focus:border-royal-deepWine shadow-sm">
         </div>
 
         <div>
-          <label class="block font-sans text-xs uppercase tracking-luxury text-maroon-900 mb-1 font-bold">Target Occasion Date</label>
-          <input type="date" id="consult-date" class="w-full bg-ivory-100 border border-gold-burnished/40 rounded-xl px-4 py-2.5 text-xs text-charcoal-800 focus:outline-none focus:border-maroon-850 focus:bg-white">
+          <label class="block font-sans text-xs uppercase tracking-luxury text-royal-deepWine mb-1 font-bold">Target Occasion Date</label>
+          <input type="date" id="consult-date" class="w-full bg-royal-card border border-royal-goldAntique/50 rounded-xl px-4 py-2.5 text-xs text-royal-espresso focus:outline-none focus:border-royal-deepWine shadow-sm">
         </div>
 
-        <button type="submit" class="w-full py-3.5 rounded-full bg-maroon-850 hover:bg-maroon-800 text-gold-pale font-sans text-xs uppercase tracking-luxury font-bold shadow-md transition-colors flex items-center justify-center gap-2 mt-2">
+        <button type="submit" class="w-full py-3.5 rounded-full bg-royal-deepWine hover:bg-royal-imperialWine text-royal-goldPale font-sans text-xs uppercase tracking-luxury font-bold shadow-royal-subtle hover:shadow-royal-hover transition-colors flex items-center justify-center gap-2 mt-2 border border-royal-goldAntique/40">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span>Confirm & Connect on WhatsApp</span>
         </button>
@@ -891,20 +1053,24 @@
   </div>
 
   <div class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end">
-    <div id="whatsapp-tooltip" class="mb-2 bg-white text-maroon-950 px-3 py-1.5 rounded-xl shadow-lg border border-gold-burnished/40 font-sans text-[11px] font-semibold hidden sm:flex items-center gap-2">
+    <div id="whatsapp-tooltip" class="mb-2 bg-royal-card text-royal-deepWine px-3.5 py-1.5 rounded-xl shadow-royal-subtle border border-royal-goldAntique/50 font-sans text-[11px] font-semibold hidden sm:flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
       <span>Chat with Kavya at Studio</span>
-      <button onclick="document.getElementById('whatsapp-tooltip').style.display='none'" class="text-charcoal-400 hover:text-charcoal-800 ml-1">&times;</button>
+      <button onclick="document.getElementById('whatsapp-tooltip').style.display='none'" class="text-royal-muted hover:text-royal-deepWine ml-1">&times;</button>
     </div>
 
-    <a 
-      href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20bridal%20embroidery%20for%20an%20upcoming%20occasion." 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      aria-label="Direct WhatsApp Chat with AT Creations" 
-      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-xl sm:text-2xl shadow-xl hover:scale-110 transition-transform duration-300 border-2 border-white focus:outline-none"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div class="relative">
+      <div class="radar-ring"></div>
+      <a 
+        href="https://wa.me/919110231866?text=Hi%20AT%20Creations%2C%20I%20would%20like%20to%20inquire%20about%20custom%20bridal%20embroidery%20for%20an%20upcoming%20occasion." 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Direct WhatsApp Chat with AT Creations" 
+        class="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-xl sm:text-2xl shadow-royal-hover hover:scale-110 transition-transform duration-300 border-2 border-white focus:outline-none"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
   </div>
 
   <script>
@@ -996,6 +1162,162 @@
       }
     }, 800);
 
+    const observerOptions = {
+      root: null,
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    const materialData = [
+      {
+        tag: "Medium Classification: Pure Copper Spiral Wire",
+        title: "French Wire Dabka • Electroplated Antique Sheen",
+        desc: "Coiled micro-wire fabricated to capture ambient mandap candlelight. It reflects an antique, non-brassy shimmer and is hand-stitched section by section using micro-needles to prevent oxidative discoloration over generations.",
+        luster: "Warm Champagne Antique (92%)",
+        lusterPct: "92%",
+        tension: "High (Maggam Framed)",
+        tensionPct: "88%",
+        pairing: "Kanchipuram Silk Saree Borders & Temple Necklines"
+      },
+      {
+        tag: "Medium Classification: Faceted Micro Glass Cylinders",
+        title: "Austrian Cutbeads • Prismatic Refraction",
+        desc: "Precision micro-cutdana faceted like jewelry stones. Stitched along neck curves and peacock feather borders to reflect subtle geometric glimmers without making the garment heavy.",
+        luster: "Prismatic Diamond Sheen (96%)",
+        lusterPct: "96%",
+        tension: "Medium (Reinforced Silk Thread)",
+        tensionPct: "80%",
+        pairing: "Floral Jaal Sleeves & Wedding Monogram Edges"
+      },
+      {
+        tag: "Medium Classification: Pure Natural Protein Fiber",
+        title: "Mulberry Raw Silk • High-GSM South Indian Weave",
+        desc: "Hand-selected high-tensile raw mulberry silk woven in Tamil Nadu. Provides the structural backbone required to support dense metal embroidery without puckering or tearing.",
+        luster: "Natural Silk Shimmer (85%)",
+        lusterPct: "85%",
+        tension: "Heavy Duty Atelier Grade",
+        tensionPct: "95%",
+        pairing: "Bridal Blouse Canvas & Muhurtham Pattu Sarees"
+      },
+      {
+        tag: "Medium Classification: Basra Seed Pearls (Moti)",
+        title: "Natural Seed Pearls • Subtle Royal Accents",
+        desc: "Hand-strung micro seed pearls selected for spherical consistency and iridescent ivory luster. Traditionally set as beaded outlines framing zardozi mango and swan medallions.",
+        luster: "Soft Iridescent Ivory (90%)",
+        lusterPct: "90%",
+        tension: "Gentle Hand Setting",
+        tensionPct: "75%",
+        pairing: "Neckline Piping & Sacred Temple Gopuram Motifs"
+      },
+      {
+        tag: "Medium Classification: Surat Spun Antique Thread",
+        title: "Antique Metallic Zari • Generational Durability",
+        desc: "Spun with real metallic filaments that preserve their royal luster without peeling. Used in high-density needle filler stitches and architectural floral lattices.",
+        luster: "Burnished Old Gold (88%)",
+        lusterPct: "88%",
+        tension: "High Needle Speed Calibrated",
+        tensionPct: "90%",
+        pairing: "All-Over Jaal Work & Scalloped Saree Borders"
+      },
+      {
+        tag: "Medium Classification: Deep Pile Silk Velvet",
+        title: "Royal Velvet Sheen • Winter Wedding Texture",
+        desc: "Luxe high-pile velvet with a deep ruby wine undertone. Yields an opulent three-dimensional relief when combined with 3D Gaddi padding and raw kundan stones.",
+        luster: "Deep Obsidian Wine Glow (94%)",
+        lusterPct: "94%",
+        tension: "Padded Relief Structural",
+        tensionPct: "92%",
+        pairing: "Reception Blouses, Lehanga Waistbands & Keepsakes"
+      }
+    ];
+
+    function selectMaterialSwatch(idx) {
+      document.querySelectorAll('.material-swatch-card').forEach((card, i) => {
+        if (i === idx) {
+          card.classList.add('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
+          card.classList.remove('border-royal-goldAntique/40', 'bg-royal-surface/90');
+        } else {
+          card.classList.remove('border-royal-deepWine', 'shadow-royal-subtle');
+          card.classList.add('border-royal-goldAntique/40', 'bg-royal-surface/90');
+        }
+      });
+
+      const m = materialData[idx];
+      const panel = document.getElementById('material-inspect-panel');
+      panel.style.opacity = '0.5';
+      setTimeout(() => {
+        document.getElementById('inspect-tag').innerText = m.tag;
+        document.getElementById('inspect-title').innerText = m.title;
+        document.getElementById('inspect-desc').innerText = m.desc;
+        document.getElementById('inspect-luster').innerText = m.luster;
+        document.getElementById('inspect-luster-bar').style.width = m.lusterPct;
+        document.getElementById('inspect-tension').innerText = m.tension;
+        document.getElementById('inspect-tension-bar').style.width = m.tensionPct;
+        document.getElementById('inspect-pairing').innerText = m.pairing;
+        panel.style.opacity = '1';
+      }, 150);
+    }
+
+    const journeyData = {
+      1: {
+        icon: "fa-comments",
+        title: "Phase 01: Client Dialogue & Palette Matching",
+        text: "We analyze your saree body and border swatches to harmonize matching dabka, resham silk, and beadwork."
+      },
+      2: {
+        icon: "fa-compass-drafting",
+        title: "Phase 02: Architectural Blueprint & Measurement Tracing",
+        text: "Every curve, neck depth, and sleeve length is custom plotted on drafting butter paper to assure a millimeter-precise fit."
+      },
+      3: {
+        icon: "fa-ring",
+        title: "Phase 03: Tensioned Maggam Needle Embroidery",
+        text: "Master artisans stretch pure mulberry silk across heavy timber frames, meticulously setting each cutdana, zardozi coil, and pearl."
+      },
+      4: {
+        icon: "fa-box-open",
+        title: "Phase 04: Quality Inspection & Global Insured Delivery",
+        text: "Each piece undergoes a 12-point inspection before being cushioned in protective muslin fabric and dispatched worldwide."
+      }
+    };
+
+    function selectJourneyStep(step) {
+      for (let i = 1; i <= 4; i++) {
+        const card = document.getElementById(`journey-card-${i}`);
+        if (card) {
+          if (i === step) {
+            card.classList.add('border-royal-deepWine', 'shadow-royal-hover');
+            card.classList.remove('border-royal-goldAntique/40', 'shadow-royal-subtle');
+            card.querySelector('.w-12').classList.add('bg-royal-deepWine', 'text-royal-goldPale', 'shadow-royal-crest');
+            card.querySelector('.w-12').classList.remove('bg-royal-card', 'text-royal-deepWine');
+          } else {
+            card.classList.remove('border-royal-deepWine', 'shadow-royal-hover');
+            card.classList.add('border-royal-goldAntique/40', 'shadow-royal-subtle');
+            card.querySelector('.w-12').classList.remove('bg-royal-deepWine', 'text-royal-goldPale', 'shadow-royal-crest');
+            card.querySelector('.w-12').classList.add('bg-royal-card', 'text-royal-deepWine');
+          }
+        }
+      }
+
+      const d = journeyData[step];
+      document.getElementById('journey-detail-icon').className = `fa-solid ${d.icon}`;
+      document.getElementById('journey-detail-title').innerText = d.title;
+      document.getElementById('journey-detail-text').innerText = d.text;
+    }
+
     let briefData = {
       garment: 'Bridal Blouse',
       medium: 'Handcrafted Aari Work',
@@ -1034,12 +1356,12 @@
         if (panel && btn) {
           if (i === stepNumber) {
             panel.classList.remove('hidden');
-            btn.classList.add('border-maroon-850', 'text-maroon-950', 'font-bold');
-            btn.classList.remove('border-transparent', 'text-charcoal-500', 'font-medium');
+            btn.classList.add('border-royal-deepWine', 'text-royal-deepWine', 'font-bold');
+            btn.classList.remove('border-transparent', 'text-royal-muted', 'font-medium');
           } else {
             panel.classList.add('hidden');
-            btn.classList.remove('border-maroon-850', 'text-maroon-950', 'font-bold');
-            btn.classList.add('border-transparent', 'text-charcoal-500', 'font-medium');
+            btn.classList.remove('border-royal-deepWine', 'text-royal-deepWine', 'font-bold');
+            btn.classList.add('border-transparent', 'text-royal-muted', 'font-medium');
           }
         }
       }
@@ -1048,33 +1370,33 @@
     function selectGarmentType(name) {
       briefData.garment = name;
       document.querySelectorAll('.canvas-card').forEach(function (el) {
-        el.classList.remove('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
-        el.classList.add('border-gold-subtle', 'bg-white');
+        el.classList.remove('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
+        el.classList.add('border-royal-goldAntique/40', 'bg-royal-surface/80');
       });
-      event.currentTarget.classList.remove('border-gold-subtle', 'bg-white');
-      event.currentTarget.classList.add('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
+      event.currentTarget.classList.remove('border-royal-goldAntique/40', 'bg-royal-surface/80');
+      event.currentTarget.classList.add('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
       refreshSummary();
     }
 
     function selectMedium(name) {
       briefData.medium = name;
       document.querySelectorAll('.medium-card').forEach(function (el) {
-        el.classList.remove('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
-        el.classList.add('border-gold-subtle', 'bg-white');
+        el.classList.remove('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
+        el.classList.add('border-royal-goldAntique/40', 'bg-royal-surface/80');
       });
-      event.currentTarget.classList.remove('border-gold-subtle', 'bg-white');
-      event.currentTarget.classList.add('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
+      event.currentTarget.classList.remove('border-royal-goldAntique/40', 'bg-royal-surface/80');
+      event.currentTarget.classList.add('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
       refreshSummary();
     }
 
     function selectMotifDirection(motifName) {
       briefData.motif = motifName;
       document.querySelectorAll('.motif-card').forEach(function (el) {
-        el.classList.remove('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
-        el.classList.add('border-gold-subtle', 'bg-white');
+        el.classList.remove('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
+        el.classList.add('border-royal-goldAntique/40', 'bg-royal-surface/80');
       });
-      event.currentTarget.classList.remove('border-gold-subtle', 'bg-white');
-      event.currentTarget.classList.add('border-maroon-850', 'bg-gold-surface', 'shadow-sm');
+      event.currentTarget.classList.remove('border-royal-goldAntique/40', 'bg-royal-surface/80');
+      event.currentTarget.classList.add('border-royal-deepWine', 'bg-royal-card', 'shadow-royal-subtle');
       refreshSummary();
     }
 
@@ -1082,6 +1404,7 @@
       briefData.medium = mediumName;
       document.getElementById('briefing-studio').scrollIntoView({ behavior: 'smooth' });
       switchStep(2);
+      refreshSummary();
     }
 
     function refreshSummary() {
@@ -1091,29 +1414,41 @@
       }
     }
 
-    function dispatchCommissionToWhatsApp() {
-      const name = document.getElementById('brief-name').value.trim() || 'Bride / Client';
-      const phone = document.getElementById('brief-phone').value.trim() || 'Not provided';
-      const city = document.getElementById('brief-city').value.trim() || 'Direct Inquiry';
-      const date = document.getElementById('brief-date').value || 'Flexible';
-      const fabric = document.getElementById('brief-fabric').value;
-      const consultMode = document.getElementById('brief-mode').value;
-      const notes = document.getElementById('brief-notes').value.trim() || 'None';
+    function getBriefPayload() {
+      return {
+        name: document.getElementById('brief-name').value.trim() || 'Bride / Client',
+        phone: document.getElementById('brief-phone').value.trim() || 'Not provided',
+        city: document.getElementById('brief-city').value.trim() || 'Direct Inquiry',
+        date: document.getElementById('brief-date').value || 'Flexible',
+        fabric: document.getElementById('brief-fabric').value,
+        consultMode: document.getElementById('brief-mode').value,
+        notes: document.getElementById('brief-notes').value.trim() || 'None'
+      };
+    }
 
+    function dispatchCommissionToWhatsApp() {
+      const p = getBriefPayload();
       const message = `*Bespoke Commission Brief - AT Creations*\n\n` +
-        `👤 *Client Name:* ${name}\n` +
-        `📱 *Contact:* ${phone}\n` +
-        `📍 *Location:* ${city}\n` +
+        `👤 *Client Name:* ${p.name}\n` +
+        `📱 *Contact:* ${p.phone}\n` +
+        `📍 *Location:* ${p.city}\n` +
         `👗 *Garment Canvas:* ${briefData.garment}\n` +
         `🪡 *Craft Medium:* ${briefData.medium}\n` +
         `✨ *Design Motif:* ${briefData.motif}\n` +
-        `🧵 *Fabric Preference:* ${fabric}\n` +
-        `🗓 *Target Occasion Date:* ${date}\n` +
-        `🎥 *Consultation Format:* ${consultMode}\n` +
-        `📝 *Neckline / Notes:* ${notes}\n\n` +
+        `🧵 *Fabric Preference:* ${p.fabric}\n` +
+        `🗓 *Target Occasion Date:* ${p.date}\n` +
+        `🎥 *Consultation Format:* ${p.consultMode}\n` +
+        `📝 *Neckline / Notes:* ${p.notes}\n\n` +
         `_Transmitted via AT Creations Studio Portal (Ruby Royal Tower, Mannivakkam)_`;
 
       window.open(`https://wa.me/919110231866?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    function dispatchCommissionToEmail() {
+      const p = getBriefPayload();
+      const subject = `Bespoke Commission Brief - ${p.name} (${briefData.garment})`;
+      const body = `Client Name: ${p.name}\nContact: ${p.phone}\nLocation: ${p.city}\nGarment: ${briefData.garment}\nMedium: ${briefData.medium}\nMotif: ${briefData.motif}\nFabric: ${p.fabric}\nDate: ${p.date}\nConsultation: ${p.consultMode}\nNotes: ${p.notes}\n\nStudio: Ruby Royal Tower, Mannivakkam`;
+      window.location.href = `mailto:ATcreations@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
     function openConsultationModal() {
